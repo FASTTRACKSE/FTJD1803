@@ -11,13 +11,12 @@ public class ptbn {
 		a = sc.nextInt();
 		System.out.println("nhap b:");
 		b = sc.nextInt();
-		if(a==0) {
-			if(b==0)
-			{
-				x=0;
+		if (a == 0) {
+			if (b == 0) {
+				x = 0;
 				System.out.println(x);
 			}
-			if(b!=0) {
+			if (b != 0) {
 				System.out.println("phuong trinh vo nghiem");
 			}
 		else {
