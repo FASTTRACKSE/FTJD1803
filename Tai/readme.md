@@ -1,4 +1,4 @@
-<b style="color:red">Bài tập</b>
+<b>Bài tập</b>
 <table width="800px">
  <tr>
  <th> tên </th>
@@ -26,6 +26,22 @@
    </td>
   <td>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/bangcuuchuong.java"> link</a?
+  </td>
+ </tr>
+    <tr>
+  <td>
+   Tính tiền điện
+   </td>
+  <td>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/tinhtiendien.java"> link</a?
+  </td>
+ </tr>
+     <tr>
+  <td>
+   Menu
+   </td>
+  <td>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/menu.java"> link</a?
   </td>
  </tr>
 
