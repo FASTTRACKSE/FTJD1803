@@ -1,7 +1,7 @@
 
 <table width="800px">
  <tr>
- <th> ten </th>
+ <th> tên </th>
  <th> link </th>
  </tr>
   <tr>
