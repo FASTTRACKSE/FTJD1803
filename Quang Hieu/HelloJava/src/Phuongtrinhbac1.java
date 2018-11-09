@@ -11,8 +11,28 @@ public class Phuongtrinhbac1 {
 		Scanner sc = new Scanner(System.in);
 		a = Integer.parseInt(sc.nextLine());
 		b = Integer.parseInt(sc.nextLine());
-		x = -b/a;
-		System.out.println(x);
+		if (a == 0)
+		{
+			if(b == 0)
+			{
+				System.out.println("phuong trinh vo so nghiem");
+			}
+			else 
+			{
+				System.out.println("phuong trinh vo ngihem");
+			}
+			
+		}
+		
+		else 
+		{
+			x = -b/a;
+			System.out.println(x);
+
+		}
+		
+		
+	
 		
 		
 
