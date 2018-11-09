@@ -36,6 +36,14 @@
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/tinhtiendien.java"> link</a?
   </td>
  </tr>
+     <tr>
+  <td>
+   Tính tiền điện
+   </td>
+  <td>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/menu.java"> link</a?
+  </td>
+ </tr>
 
 </table>
   
