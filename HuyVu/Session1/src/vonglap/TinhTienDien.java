@@ -16,7 +16,7 @@ public class TinhTienDien {
 		
 		if(soDien < 50) {
 			tien=soDien*1000;
-			System.out.println("So tien = " +tien);
+			System.out.println("So tien = " + tien);
 		}else {
 			tien = 50 * 1000 + (soDien - 50 ) * 1200;
 			System.out.println("So tien = " + tien);
