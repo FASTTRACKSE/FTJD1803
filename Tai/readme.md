@@ -1,13 +1,24 @@
-<ul>
- <li>
-  <b> Bài tập cộng trừ nhân chia</b> <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/HelloJava.java">link</a>
- </li>
- <li>
-<b>Phuong trình bậc nhất </b> <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/ptbn.java">link</a>
-<table>
+
+<table width="300px">
  <tr>
  <th> ten </th>
  <th> link </th>
+ </tr>
+  <tr>
+  <td>
+   Bài tập cộng trừ nhân chia
+   </td>
+  <td>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/HelloJava.java"> link</a?
+  </td>
+ </tr>
+    <tr>
+  <td>
+   Phuong trình bậc nhất
+   </td>
+  <td>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/ptbn.java"> link</a?
+  </td>
  </tr>
  <tr>
   <td>
