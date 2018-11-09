@@ -20,7 +20,7 @@ public class PTB1 {
 				System.out.println("Phuong trinh vo nghiem");
 			}
 		}
-		else System.out.println("Nghiem cua phuong trinh la x = "+-b/a);
+		else System.out.println("Nghiem cua phuong trinh la x = "+(float)-b/a);
 
 	}
 
