@@ -58,7 +58,7 @@ public class menu {
 
 	public static void main(String[] args) {
 		int a = 0;
-		while (a != 5) {
+		while (a != 4) {
 			System.out.println("+----------------------------------+");
 			System.out.println("nhap lua chon:");
 
