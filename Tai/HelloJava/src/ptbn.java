@@ -19,34 +19,9 @@ public class ptbn {
 			if (b != 0) {
 				System.out.println("phuong trinh vo nghiem");
 			}
-		}
-		if (a > 0) {
-			if (b > 0) {
-				x = -b / a;
-				System.out.println(x);
-			}
-			if (b == 0) {
-				x = 0;
-				System.out.println(x);
-			}
-			if (b < 0) {
-				x = b / a;
-				System.out.println(x);
-			}
-		}
-		if (a < 0) {
-			if (b > 0) {
-				x = b / a;
-				System.out.println(x);
-			}
-			if (b == 0) {
-				x = 0;
-				System.out.println(x);
-			}
-			if (b < 0) {
-				x = -b / a;
-				System.out.println(x);
-			}
+		else {
+			x=-b/a;
+			System.out.println("Nghiệm của pt là:"+x);	
 		}
 	}
 }
