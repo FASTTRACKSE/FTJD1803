@@ -39,7 +39,7 @@ public class PTB2 {
 				System.out.println("Phuong trinh co nghiem kep: "+x);
 			}
 			else {
-				int x1 = (-b- sqrt(delta))/(2*a);
+				int x1 = (int) ((-b- Math.sqrt(delta))/(2*a));
 				int x2 = (-b+ sqrt(delta))/(2*a);
 				System.out.println("Phuong trinh co hai nghiem phan biet: "+x1+" va " +x2);
 			}
