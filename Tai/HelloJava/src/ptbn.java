@@ -23,5 +23,4 @@ public class ptbn {
 			x=-b/a;
 			System.out.println("Nghiệm của pt là:"+x);	
 		}
-	}
-}
+	}}}
