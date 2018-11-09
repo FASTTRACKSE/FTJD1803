@@ -32,7 +32,7 @@ public class menu {
 				System.out.println("phuong trinh vo nghiem");
 			}} else {
 				x = -b / a;
-				System.out.println("nghiem la :" + x);
+				System.out.println("nghiem laÂ :" + x);
 			}
 		}
 
@@ -58,7 +58,7 @@ public class menu {
 
 	public static void main(String[] args) {
 		int a = 0;
-		while (a != 5) {
+		while (a != 4) {
 			System.out.println("+----------------------------------+");
 			System.out.println("nhap lua chon:");
 
