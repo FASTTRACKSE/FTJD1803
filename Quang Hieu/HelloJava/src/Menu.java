@@ -6,6 +6,11 @@ public class Menu {
 
 		// TODO Auto-generated method stub
 		while (true) {
+			System.out.println("+---------------------------+");
+			System.out.println("1. Giai Phuong Trinh Bac 1");
+			System.out.println("2. Bang Cuu Chuong");
+			System.out.println("3. Tinh Tien Dien");
+			System.out.println("+---------------------------+");
 			int q;
 			System.out.println("vui long nhap so");
 			Scanner sc = new Scanner(System.in);
