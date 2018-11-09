@@ -1,5 +1,5 @@
 
-<table width="300px">
+<table width="800px">
  <tr>
  <th> ten </th>
  <th> link </th>
@@ -22,7 +22,7 @@
  </tr>
  <tr>
   <td>
-   Bang cuu chuong
+   Bảng cửu chương
    </td>
   <td>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/bangcuuchuong.java"> link</a?
