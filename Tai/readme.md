@@ -1,4 +1,4 @@
-<b style="color:red">Bài tập</b>
+<b styles="color:red">Bài tập</b>
 <table width="800px">
  <tr>
  <th> tên </th>
