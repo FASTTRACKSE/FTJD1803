@@ -38,7 +38,7 @@
  </tr>
      <tr>
   <td>
-   Tính tiền điện
+   Menu
    </td>
   <td>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/menu.java"> link</a?
