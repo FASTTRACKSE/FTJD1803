@@ -4,3 +4,11 @@
  </li>
  <li>
 <b>Phuong trình bậc nhất </b> <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/ptbn.java">link</a>
+<table>
+ <tr>
+ <th> ten </th>
+ <th> link </th>
+ </tr>
+
+</table>
+  
