@@ -7,6 +7,7 @@ public class TinhTienDien {
 
 		int a;
 		int b;
+		System.out.println("vui long nhap so chu dien");
 		Scanner sc = new Scanner(System.in);
 		a = Integer.parseInt(sc.nextLine());
 		if (a < 50) {
