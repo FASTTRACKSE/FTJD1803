@@ -1,12 +1,7 @@
 import java.util.Scanner;
 public class SapXepTinhDiem {
 
-	public void SapXepTangDan() {
-
-
-
-	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String hoTen[] = new String[10];
