@@ -59,7 +59,10 @@ public class menu {
 	public static void main(String[] args) {
 		int a = 0;
 		while (a != 4) {
+<<<<<<< HEAD
+=======
 			System.out.println("+----------------------------------+");
+>>>>>>> bccd0a7aadddf1fa2364e9cee001b974ca09f85c
 			System.out.println("nhap lua chon:");
 
 			Scanner sc = new Scanner(System.in);

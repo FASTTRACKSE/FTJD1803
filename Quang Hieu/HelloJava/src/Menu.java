@@ -12,7 +12,7 @@ public class Menu {
 			System.out.println("3. Tinh Tien Dien");
 			System.out.println("+---------------------------+");
 			int q;
-			System.out.println("vui long nhap so");
+			System.out.println("Chon chuc nang:");
 			Scanner sc = new Scanner(System.in);
 			q = Integer.parseInt(sc.nextLine());
 

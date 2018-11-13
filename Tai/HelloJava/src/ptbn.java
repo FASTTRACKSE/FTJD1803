@@ -16,11 +16,11 @@ public class ptbn {
 				x = 0;
 				System.out.println(x);
 			}
-			if (b != 0) {
+			else {
 				System.out.println("phuong trinh vo nghiem");
-			}
+			}}
 		else {
 			x=-b/a;
-			System.out.println("Nghiệm của pt là:"+x);	
+			System.out.println("nghiem la�:"+x);	
 		}
-	}}}
+	}}
