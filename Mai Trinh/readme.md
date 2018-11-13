@@ -4,3 +4,4 @@
 3. Phuong trinh bac hai: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/HelloJava/src/PTB2.java"> PTB2 </a>
 4. Bang cuu chuong: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/HelloJava/src/bangCuuChuong.java"> Bangcuuchuong </a>
 5. Menu: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/HelloJava/src/Menu.java"> Menu </a>
+6. Sap xep tinh diem: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/Mang/src/SapXepTinhDiem.java"> sapxep </a>
