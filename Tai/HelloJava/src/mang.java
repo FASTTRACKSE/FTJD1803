@@ -4,7 +4,6 @@ public class mang {
 	public static void main(String[] args) {
 		SinhVien danhsach[] = new SinhVien[10];
 		int n;
-		int k=0;
 		try {
 			Scanner sc=new Scanner(System.in);
 			System.out.println("nhap so sinh vien:");
