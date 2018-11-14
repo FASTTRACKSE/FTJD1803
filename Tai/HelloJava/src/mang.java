@@ -68,17 +68,21 @@ class SinhVien {
 	}
 
 	public void tongket() {
-		if (this.diem < 5) {
-			System.out.println("Yeu");
-		}
-		if (this.diem >= 5 && this.diem < 6.5) {
-			System.out.println("trung binh");
-		}
-		if (this.diem >= 7.5 && this.diem < 9) {
-			System.out.println("Kha");
-		}
-		if (this.diem >= 9) {
-			System.out.println("Gioi");
-		}
+		String a,b,c;
+//		boolean c;
+		a=(this.diem<5)?("Yeu"):(b=(this.diem >= 5 && this.diem < 6.5)?("trungbinh"):(c=(this.diem >= 7.5 && this.diem < 9)?("kha"):("gioi")));
+		System.out.println(a);
+//		if (this.diem < 5) {
+//			System.out.println("Yeu");
+//		}
+//		if (this.diem >= 5 && this.diem < 6.5) {
+//			System.out.println("trung binh");
+//		}
+//		if (this.diem >= 7.5 && this.diem < 9) {
+//			System.out.println("Kha");
+//		}
+//		if (this.diem >= 9) {
+//			System.out.println("Gioi");
+//		}
 	}
 }
