@@ -56,7 +56,7 @@
   <td>
    Hướng đối tương p1
    </td>
-  <td>
+  <td rowpan=2>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/QLSV.java"> link</a><br>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/SinhVien.java"> link</a>
   </td>
