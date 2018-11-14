@@ -1,5 +1,5 @@
 <b>Bài tập</b>
-<table width="800px">
+<table width="1000px">
  <tr>
  <th> tên </th>
  <th> link </th>
