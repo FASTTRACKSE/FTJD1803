@@ -44,6 +44,14 @@
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/menu.java"> link</a?
   </td>
  </tr>
+    <tr>
+  <td>
+   Bài tập về nhà
+   </td>
+  <td>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/mang.java"> link</a?
+  </td>
+ </tr>
 
 </table>
   
