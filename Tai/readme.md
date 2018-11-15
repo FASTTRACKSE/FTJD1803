@@ -1,5 +1,5 @@
 <b>Bài tập</b>
-<table width="800px">
+<table width="1000px">
  <tr>
  <th> tên </th>
  <th> link </th>
@@ -50,6 +50,15 @@
    </td>
   <td>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/mang.java"> link</a?
+  </td>
+ </tr>
+       <tr>
+  <td>
+   Hướng đối tương p1
+   </td>
+  <td rowpan=2>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/QLSV.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/SinhVien.java"> link</a>
   </td>
  </tr>
 
