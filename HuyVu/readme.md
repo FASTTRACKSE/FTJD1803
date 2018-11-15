@@ -4,8 +4,8 @@ Bai tap 2 : Phuong trinh bac 2 : <a href="https://github.com/FASTTRACKSE/FTJD180
 Bai tap 3 : Bang cuu chuong    : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/BangCuuChuong.java">Bảng cửu chương</a></br>
 Bai tap 4 : Tinh tien dien : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/TinhTienDien.java"> Tinh tiền điện </a></br>
 Bai tap 5 : SwitchCase : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/SwtichCase.java">SwitchCase</a></br>
-Bai tap 6 : Mảng (Sắp xếp điểm) : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/Mang.java">Sắp xếp điểm sinh viên</a> ------ class <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/SinhVien.java">SinhVien</a></br>
+Bai tap 6 : Mảng (Sắp xếp điểm) : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/Mang.java">Sắp xếp điểm sinh viên</a> -----------> class <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/vonglap/SinhVien.java">SinhVien</a></br>
 
 <h1> ******    OOP    ********* </h1></br>
-Bai tap 7 : Menu students <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop/src/danhsachsinhvien/MenuStudents.java">Thuc don sinh vien</a> ||||||| class Student <a href="">lop sinh vien</a></br>
+Bai tap 7 : Menu students <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop/src/danhsachsinhvien/MenuStudents.java">Thuc don sinh vien</a> ----------> class Student <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop/src/danhsachsinhvien/Student.java">Lop sinh vien</a></br>
 
