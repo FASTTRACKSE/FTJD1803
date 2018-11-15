@@ -32,7 +32,7 @@ public class Mang {
 				a[i].setHocLuc(hocLuc);
 
 			}else if (7 <= diem && diem < 9) {
-
+  
 				hocLuc = "G";
 				a[i].setHocLuc(hocLuc);
 

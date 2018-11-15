@@ -23,8 +23,6 @@ public class PTB1 {
 			System.out.println("Phuong trinh co nghiem duy nhat : "+ x);
 		}
 
-
-
 	}
 
 }
