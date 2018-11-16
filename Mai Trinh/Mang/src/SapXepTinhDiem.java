@@ -40,7 +40,7 @@ public class SapXepTinhDiem {
 		for ( j=0; j<i; j++) {
 			for( int k=j; k<i; k++){
 				if(bangDiem[j]>bangDiem[k]) {
-					min = bangDiem[j];
+					min = bangDiem[j];  
 					bangDiem[j]=bangDiem[k];
 					bangDiem[k]=min;
 
