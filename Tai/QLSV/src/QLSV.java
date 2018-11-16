@@ -30,13 +30,12 @@ public class QLSV {
 			case 3:{
 				System.out.println("Tinh sinh vien cao diem nhat lop:");
 				for (int i = 0; i < 3; i++) {
-//					for (int j = 0; j < 3; j++) {
-						if(sv[0].sosanh(sv[i])==1) {
+					for (int j = 0; j < 3; j++) {
+						if(sv[i].sosanh(sv[j])==1) {
 							System.out.println("kq la:"+sv[i].ten+":"+sv[i].diemTB);
 							break;
-//						}
+						}
 					}
-						else System.out.println("kq la:"+sv[0].ten+":"+sv[0].diemTB);break;
 				}
 				break;
 			}

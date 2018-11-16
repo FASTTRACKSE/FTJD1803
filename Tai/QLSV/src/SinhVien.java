@@ -13,7 +13,7 @@ public class SinhVien {
 		this.diemJava = new Scanner(System.in).nextFloat();
 		System.out.println("nhap diem Html sinh vien:");
 		this.diemHtml = new Scanner(System.in).nextFloat();
-		diemTB = (float) ((this.diemHtml + this.diemJava) / 2);
+		this.diemTB = (float) ((this.diemHtml + this.diemJava) / 2);
 	}
 
 	public void xuat() {
