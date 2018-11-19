@@ -53,6 +53,7 @@ public class Main {
 			switch (choose) {
 
 			case 1:
+				
 				System.out.println();
 				Student sv1= new Student();
 				System.out.println("----------Nhap thong tin sinh vien moi----------");
@@ -62,6 +63,7 @@ public class Main {
 				break;
 
 			case 2: 
+				
 				System.out.println();
 				System.out.println("---Cap nhat thong tin sinh vien theo id---");				
 				System.out.print("Moi ban nhap id sinh vien: ");				
@@ -75,18 +77,28 @@ public class Main {
 				break;
 
 			case 3: 
+				
 				System.out.println();
 				System.out.println("---------Xoa sinh vien theo id---------");
 				System.out.println("Nhap id cua sinh vien: ");
 				int sv3;
 				sv3 = Integer.parseInt(sc.nextLine());
 
-				for ( i=0; i<nhap ; i++) {
+//				for ( i=0; i<nhap ; i++) {
+//					if (sv3 == sv[i].getId()) {
+//						Student temp = sv[i];
+//						sv[i] = sv[i+1];
+//						sv[i+1]=temp;
+//						
+//					}
+//				}
+				for(i = 0; i < nhap; i++) {
 					if (sv3 == sv[i].getId()) {
-						Student temp = sv[i];
-						sv[i] = sv[i+1];
-						sv[i+1]=temp;
-						
+			            int newSize = nhap - 1; 
+			            for(int j=i; j < newSize; j++) {
+			                sv[j] = sv[j+1];
+			            }
+			            nhap--;
 					}
 				}
 				System.out.println("***Moi chon 5 de xem lai danh sach");
@@ -94,6 +106,7 @@ public class Main {
 				break;
 
 			case 4:
+				
 				System.out.println();
 				System.out.println("---Sap xep sinh vien theo danh sach---");
 				System.out.println();
@@ -103,10 +116,8 @@ public class Main {
 							Student temp = sv[i];
 							sv[i] = sv[j];
 							sv[j] = temp;
-							//sv[j].setName(sv[i].getName());
-
+						
 						}
-
 					}
 				}
 				System.out.println("***Moi chon 5 de xem lai danh sach cap nhat");
