@@ -28,8 +28,9 @@ public class Main {
 			case 1:
 				for (int i =0; i<3; i++) {
 					Student sv = new Student();					
-					students[i]= sv;
+					
 					sv.input();
+					students[i]= sv;
 				}
 				break;
 
