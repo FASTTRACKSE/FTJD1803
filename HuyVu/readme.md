@@ -18,4 +18,5 @@ Bai tap 1 (Lab 4) : Chu vi & Dien tich (Hinh vuong va hinh chu nhat) <a href="ht
                     Class Vuong <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/Vuong.java">Vuong</a></br>
                     Class ChuNhat <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/ChuNhat.java">Chunhat</a></br>
 Bai tap 2 (Lab 4) : SinhVienFpt  :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/sinhvienfpt">SinhVienFpt</a>
+Bai tap 3 (Lab 4) : Bai 3 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/Bai3"> Bai 3</a>
 
