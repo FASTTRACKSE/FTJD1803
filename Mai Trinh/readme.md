@@ -8,3 +8,4 @@ Phan 1:
 5. Menu: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/HelloJava/src/Menu.java"> Menu </a>
 6. Sap xep tinh diem: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/Mang/src/SapXepTinhDiem.java"> sapxep </a>
 7. Quan li sinh vien: <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Assignment3/src"> Assignment3 </a>
+8. Lab4 bai 1: <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Lab4/src"> bai1L4 </a>
