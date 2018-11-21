@@ -17,4 +17,5 @@ Bai tap 2 : Menu students <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/
 Bai tap 1 (Lab 4) : Chu vi & Dien tich (Hinh vuong va hinh chu nhat) <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/Main.java">Chu vi & Dien tich (Hinh vuong va hinh chu nhat)</a></br>
                     Class Vuong <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/Vuong.java">Vuong</a></br>
                     Class ChuNhat <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/ChuNhat.java">Chunhat</a></br>
+Bai tap 2 (Lab 4) : SinhVienFpt  :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/sinhvienfpt">SinhVienFpt</a>
 
