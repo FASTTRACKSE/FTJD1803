@@ -15,5 +15,6 @@ public class Lad03 {
 		for (int i = 0; i <=n; i++) {
 			sp[i].xuat();
 		}
+		//alt+shift+rs
 	}
 }
