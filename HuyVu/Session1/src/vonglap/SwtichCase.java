@@ -95,11 +95,11 @@ public class SwtichCase {
 	}
 
 	public static void main(String[] args) {
-		int a;
+		int sochon;
 		Scanner sr = new Scanner(System.in);
-		System.out.println("Nhap a :");
-		a = sr.nextInt();
-		switch (a) {
+		System.out.println("Nhap so chon :");
+		sochon = sr.nextInt();
+		switch (sochon) {
 		case 1:
 			System.out.println("Phuong trinh bac 1 :");
 			SwtichCase m1 = new SwtichCase();

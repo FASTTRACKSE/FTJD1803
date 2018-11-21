@@ -67,12 +67,15 @@ public class Menu {
 	public void TinhTienDien() {
 		float tien;
 
-		System.out.print("Nhap so dien su dung cua thang: ");
-		Scanner sc = new Scanner(System.in);
-		int soDien = Integer.parseInt(sc.nextLine());
+		int soDien=-1;
 
-		if (0< soDien && soDien <50) {
-			tien= soDien*1000;
+		while(soDien<0) {
+			System.out.print("Nhap so dien su dung cua thang: ");
+			Scanner sc = new Scanner(System.in);
+			soDien = Integer.parseInt(sc.nextLine());
+		}
+		if ( soDien >=0 && soDien <50) {
+			tien= soDien*1000; 
 			System.out.println("Tien thang nay la: "+ tien );
 
 		}
@@ -80,12 +83,11 @@ public class Menu {
 			tien = 50*1000+(soDien-50)*1200;
 			System.out.println("Tien thang nay la: "+ tien);
 		}
-
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		int i=0;
 		while(i==0) {
 			System.out.println("+--------------------------------------+");
