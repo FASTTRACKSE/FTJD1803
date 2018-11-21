@@ -61,6 +61,26 @@
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/SinhVien.java"> link</a>
   </td>
  </tr>
+        <tr>
+  <td>
+   Bài tập về nhà 2
+   </td>
+  <td rowpan=2>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/Lad03/src/Lad03.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/Lad03/src/sanpham.java"> link</a>
+  </td>
+ </tr>
+   </tr>
+        <tr>
+  <td>
+   SETER,GETER
+   </td>
+  <td rowpan=2>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/menu1.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/SinhVien.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/Main.java"> link</a>
+  </td>
+ </tr>
 
 </table>
   
