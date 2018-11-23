@@ -19,37 +19,6 @@ public class BienLai {
 		this.khachHang = khachHang;
 	}
 
-	public int getChiSoCu() {
-		return chiSoCu;
-	}
-
-	public void setChiSoCu(int chiSoCu) {
-		this.chiSoCu = chiSoCu;
-	}
-
-	public int getChiSoMoi() {
-		return chiSoMoi;
-	}
-
-	public void setChiSoMoi(int chiSoMoi) {
-		this.chiSoMoi = chiSoMoi;
-	}
-
-	public double getTienPhaiTra() {
-		return tienPhaiTra;
-	}
-
-	public void setTienPhaiTra(double tienPhaiTra) {
-		this.tienPhaiTra = tienPhaiTra;
-	}
-
-	public KhachHang getKhachHang() {
-		return khachHang;
-	}
-
-	public void setKhachHang(KhachHang khachHang) {
-		this.khachHang = khachHang;
-	}
 
 	public void nhapBienLai() {
 

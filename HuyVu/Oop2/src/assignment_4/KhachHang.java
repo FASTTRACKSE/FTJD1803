@@ -12,7 +12,6 @@ public class KhachHang {
 		
 	}
 	
-	
 
 	public KhachHang(String tenChuHo, int soNha, int maSoCongTo) {
 		super();
@@ -21,30 +20,6 @@ public class KhachHang {
 		this.maSoCongTo = maSoCongTo;
 	}
 
-
-	public String getTenChuHo() {
-		return tenChuHo;
-	}
-
-	public void setTenChuHo(String tenChuHo) {
-		this.tenChuHo = tenChuHo;
-	}
-
-	public double getSoNha() {
-		return soNha;
-	}
-
-	public void setSoNha(int soNha) {
-		this.soNha = soNha;
-	}
-
-	public double getMaSoCongTo() {
-		return maSoCongTo;
-	}
-
-	public void setMaSoCongTo(int maSoCongTo) {
-		this.maSoCongTo = maSoCongTo;
-	}
 	
 	public void nhapThongTinKhachHang() {
 		Scanner scanner = new Scanner(System.in);
