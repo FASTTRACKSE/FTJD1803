@@ -60,11 +60,16 @@ public class Main {
 				String ten = scanner.nextLine();
 				for(Student sv:arrayListStudent) {
 					if(sv.getHoTen().equals(ten)) {
-						System.out.println(sv.getHoTen()+"||"+sv.getDiemTrungBinh());
+						System.out.println(sv.getHoTen());
+						arrayListStudent.remove(sv);
+						System.out.println("Xoa sinh vien vua tim :" + arrayListStudent.size());
+						break;
 					}
+					
+					
 				}
-				arrayListStudent.remove(ten);
-				System.out.println("Xoa :"+arrayListStudent.size());
+				
+				
 			}
 			else if(choice==6) {
 				System.exit(choice);
