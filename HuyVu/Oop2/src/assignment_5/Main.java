@@ -10,8 +10,8 @@ import lab5.Student;
 public class Main {
 
 	public static void main(String[] args) {
-		int tongLuong = 0;
-		int luong;
+		double tongLuong = 0;
+		double luong;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Nhap so thong tin danh sach can bo truong hoc can nhap :");
 		int n = scanner.nextInt();
@@ -43,13 +43,14 @@ public class Main {
 
 			}else if(chon==2) {
 				System.out.println("Xuat danh sach can bo : ");
-				for (int i = 0; i < n; i++) {
-					System.out.println(arrayList.toString());
+				for (ThongTinCanBo ttcb : arrayList) {
+					
 				}
+				System.out.println(arrayList.toString());
 
 			}else if(chon==3) {
 				for(int i = 0 ; i < n ; i++) {
-					luong = (int) thongTinCanBo.tinhLuong();
+					luong = thongTinCanBo.tinhLuong();
 					tongLuong +=luong;
 				}
 				System.out.println("Tong luong phai tra cho can bo = " + tongLuong);
@@ -72,7 +73,7 @@ public class Main {
 				});
 				System.out.println("Sap xep can bo theo luong :");
 				for(int i=0;i<arrayList.size();i++) {
-					System.out.println("Ho va ten :"+arrayList.get(i).getHoTen()+ " Luong : " +arrayList.get(i).tinhLuong());
+					System.out.println("Ho va ten : " +arrayList.get(i).getHoTen()+ " Luong : " +arrayList.get(i).tinhLuong());
 				}
 			}else if(chon==5) {
 				System.exit(chon);
