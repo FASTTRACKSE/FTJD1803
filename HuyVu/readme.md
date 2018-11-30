@@ -20,5 +20,6 @@ Bai tap 3 (Lab 4) : Bai 3 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree
 Bai tap 4 (Lab 4) : Bai 4 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/Bai4"> Bai 4</a></br>
 Bài Assignment 4  : Assignment 4 <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/assignment_4">Assignment 4</a></br>
 
-Bai tap 1 (lab 5) : Bai 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5">Bai 1</a>
+Bai tap 1 (lab 5) : Bai 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5">Bai 1</a></br>
+Bai tap 2 (lab 5) : Bai 2 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5_2">Bai 2</a></br>
 
