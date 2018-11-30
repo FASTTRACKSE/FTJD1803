@@ -21,7 +21,7 @@ public class Main {
 
 		System.out.println("Nhap thong tin cho can bo :");
 		while(true) {
-			
+
 			menu();
 			int chon = scanner.nextInt();
 			if(chon==1) {
@@ -46,23 +46,25 @@ public class Main {
 				for (int i = 0; i < n; i++) {
 					System.out.println(arrayList.toString());
 				}
-				
+
 			}else if(chon==3) {
 				for(int i = 0 ; i < n ; i++) {
 					luong = (int) thongTinCanBo.tinhLuong();
 					tongLuong +=luong;
 				}
 				System.out.println("Tong luong phai tra cho can bo = " + tongLuong);
-				
+
 			}else if (chon==4) {
 				Collections.sort(arrayList, new Comparator<ThongTinCanBo>() {
 
 					@Override
 					public int compare(ThongTinCanBo o1, ThongTinCanBo o2) {
 						// TODO Auto-generated method stub
-						if(o1.tinhLuong()>o2.tinhLuong()) 
+						if(o1.tinhLuong()>o2.tinhLuong())  
 							return 0;
-						else
+
+						else 
+
 							return 1;
 					}
 				});

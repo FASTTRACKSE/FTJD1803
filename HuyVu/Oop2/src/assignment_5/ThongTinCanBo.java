@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ThongTinCanBo {
 	private String hoTen;
-	private String loaiCanBo;
+	
 	private double heSoLuong;
 	private int phuCap;
 	
@@ -14,10 +14,10 @@ public class ThongTinCanBo {
 		
 	}
 
-	public ThongTinCanBo(String hoTen, String loaiCanBo, double heSoLuong, int phuCap) {
+	public ThongTinCanBo(String hoTen,double heSoLuong, int phuCap) {
 		super();
 		this.hoTen = hoTen;
-		this.loaiCanBo = loaiCanBo;
+		
 		this.heSoLuong = heSoLuong;
 		this.phuCap = phuCap;
 	}
@@ -28,14 +28,6 @@ public class ThongTinCanBo {
 
 	public void setHoTen(String hoTen) {
 		this.hoTen = hoTen;
-	}
-
-	public String getLoaiCanBo() {
-		return loaiCanBo;
-	}
-
-	public void setLoaiCanBo(String loaiCanBo) {
-		this.loaiCanBo = loaiCanBo;
 	}
 
 	public double getHeSoLuong() {
@@ -68,7 +60,7 @@ public class ThongTinCanBo {
 
 	@Override
 	public String toString() {
-		return "ThongTinCanBo [hoTen=" + hoTen + ", loaiCanBo=" + loaiCanBo + ", heSoLuong=" + heSoLuong + ", phuCap="
+		return "ThongTinCanBo [hoTen=" + hoTen + ", heSoLuong=" + heSoLuong + ", phuCap="
 				+ phuCap + ", scanner=" + scanner + "]";
 	}
 	
