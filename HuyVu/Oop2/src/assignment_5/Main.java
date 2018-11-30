@@ -19,7 +19,7 @@ public class Main {
 
 		ThongTinCanBo thongTinCanBo = null;
 
-		System.out.println("Nhap thong tin cho can bo :");
+		System.out.println("Chon so ban can nhap :");
 		while(true) {
 
 			menu();
@@ -60,17 +60,19 @@ public class Main {
 					@Override
 					public int compare(ThongTinCanBo o1, ThongTinCanBo o2) {
 						// TODO Auto-generated method stub
-						if(o1.tinhLuong()>o2.tinhLuong())  
-							return 0;
-
-						else 
-
+						if(o1.tinhLuong()>o2.tinhLuong()) {  
 							return 1;
+						}
+						else { 
+							if(o1.tinhLuong()==o2.tinhLuong())
+								return 0;
+						}
+						return -1;
 					}
 				});
 				System.out.println("Sap xep can bo theo luong :");
 				for(int i=0;i<arrayList.size();i++) {
-					System.out.println("Ho va ten :"+arrayList.get(i).tinhLuong());
+					System.out.println("Ho va ten :"+arrayList.get(i).getHoTen()+ " Luong : " +arrayList.get(i).tinhLuong());
 				}
 			}else if(chon==5) {
 				System.exit(chon);
