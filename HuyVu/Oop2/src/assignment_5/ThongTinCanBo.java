@@ -3,8 +3,8 @@ package assignment_5;
 import java.util.Scanner;
 
 public class ThongTinCanBo {
-	private String hoTen;
 	
+	private String hoTen;
 	private double heSoLuong;
 	private int phuCap;
 	
