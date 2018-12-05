@@ -78,7 +78,7 @@ public class GiangVien extends ThongTinCanBo{
 
 		@Override
 		public String toString() {
-			return "GiangVien [khoa=" + khoa + ", trinhDo=" + trinhDo + ", soTietDay=" + soTietDay + "]";
+			return "GiangVien [hoTen="+getHoTen()+",khoa=" + khoa + ", trinhDo=" + trinhDo + ", soTietDay=" + soTietDay + "]";
 		}
 
 		

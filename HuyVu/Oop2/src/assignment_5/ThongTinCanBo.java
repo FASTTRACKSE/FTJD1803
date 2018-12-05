@@ -61,7 +61,7 @@ public class ThongTinCanBo {
 	@Override
 	public String toString() {
 		return "ThongTinCanBo [hoTen=" + hoTen + ", heSoLuong=" + heSoLuong + ", phuCap="
-				+ phuCap + ", scanner=" + scanner + "]";
+				+ phuCap + ", luong =" + tinhLuong() + "]";
 	}
 	
 	
