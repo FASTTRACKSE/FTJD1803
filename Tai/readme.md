@@ -94,7 +94,8 @@
  </tr>
   
    </td>
-    Assignment 7
+     <td>
+  Bài tập về nhà 3
    </td>
   <td rowpan=2>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV1/src"> link</a><br>
