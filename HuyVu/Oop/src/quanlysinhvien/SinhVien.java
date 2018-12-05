@@ -36,7 +36,7 @@ public class SinhVien implements Serializable{
 		return ten;
 	}
 
-	public void setName(String ten) {
+	public void setTen(String ten) {
 		this.ten = ten;
 	}
 

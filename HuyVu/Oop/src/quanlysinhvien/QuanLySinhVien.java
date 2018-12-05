@@ -17,7 +17,7 @@ public class QuanLySinhVien {
 		listSinhVien = sinhVienDao.read();
 	}
 
-	public int inpuId() {
+	public int inputId() {
 		System.out.println("Nhap ma sinh vien");
 		while(true) {
 			try {
@@ -29,7 +29,7 @@ public class QuanLySinhVien {
 		}
 	}
 
-	private String inputName() {
+	private String inputTen() {
 		System.out.println("Nhap ten sinh vien:");
 		return scanner.nextLine();
 	}
@@ -90,7 +90,7 @@ public class QuanLySinhVien {
 	public void add() throws IOException {
 		int id = (listSinhVien.size()>0) ? (listSinhVien.size()+1):1;
 		System.out.println("Ma sinh vien = "+ id);
-		String ten = inputName();
+		String ten = inputTen();
 		byte tuoi = inputTuoi();
 		String diaChi = inputDiaChi();
 		float diemTB = inputDTB();
@@ -109,4 +109,52 @@ public class QuanLySinhVien {
             System.out.format("%10.1f%n", sinhVien.getDiemTrungBinh());
         }
     }
+	
+	public void edit(int id) {
+        boolean isExisted = false;
+        int size = listSinhVien.size();
+        for (int i = 0; i < size; i++) {
+            if (listSinhVien.get(i).getId() == id) {
+                isExisted = true;
+                listSinhVien.get(i).setTen(inputTen());
+                listSinhVien.get(i).setTuoi(inputTuoi());
+                listSinhVien.get(i).setDiaChi(inputDiaChi());
+                listSinhVien.get(i).setDiemTrungBinh(inputDTB());
+                break;
+            }
+        }
+        if (!isExisted) {
+            System.out.printf("id = %d not existed.\n", id);
+        } else {
+            try {
+				sinhVienDao.write(listSinhVien);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+    }
+	
+	public void delete(int id) {
+        SinhVien sinhVien = null;
+        int size = listSinhVien.size();
+        for (int i = 0; i < size; i++) {
+            if (listSinhVien.get(i).getId() == id) {
+                sinhVien = listSinhVien.get(i);
+                break;
+            }
+        }
+        if (sinhVien != null) {
+        	listSinhVien.remove(sinhVien);
+            try {
+				sinhVienDao.write(listSinhVien);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        } else {
+            System.out.printf("id = %d not existed.\n", id);
+        }
+    }
+	
 }
