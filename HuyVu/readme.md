@@ -27,5 +27,5 @@ Bài Assignment 5  : Assignment 5 <a href="">Bài Assignment 5</a>
 
 -------------- Lab 6 ---------------</br>
 Bài tập 1 (lab 6) : Bài 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Unit7/src/lab6">Bài 1</a></br>
-Bai Assignment 6 :  Bai Assignment 6 : <a href="
+Bai Assignment 6 :  Bai Assignment 6 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Unit7/src/assignment_6
 "> Assignment 6 </a>
