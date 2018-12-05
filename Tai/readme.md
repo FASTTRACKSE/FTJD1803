@@ -83,7 +83,7 @@
  </tr>
    <tr>
   <td>
-  Bài tập về nhà 3
+  Assignment 7
    </td>
   <td rowpan=2>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/menu1.java"> link</a><br>
