@@ -23,3 +23,4 @@ Bài Assignment 4  : Assignment 4 <a href="https://github.com/FASTTRACKSE/FTJD18
 Bai tap 1 (lab 5) : Bai 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5">Bai 1</a></br>
 Bai tap 2 (lab 5) : Bai 2 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5_2">Bai 2</a></br>
 
+Bài tập 1 (lab 6) : Bài 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Unit7/src/lab6">Bài 1</a></br>
