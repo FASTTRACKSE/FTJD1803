@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class menu1 {
 
-	public void show() {
-		SinhVien[] cn = new SinhVien[5];
+	static public void show() {
+		
+		ArrayList<SinhVien> sv=new ArrayList<SinhVien>();
+		
 		System.out.println("1. them sinh vien\n" + "2. cap nhat thong tin\r\n" + "3. xoa sinh vien\r\n"
 				+ "4. sap xep\r\n" + "5. Hien thi.\r\n" + "0. Exit");
 		int n = 0;
@@ -17,7 +23,7 @@ public class menu1 {
 			switch (b) {
 			case 0: {
 				System.out.println("ket thuc");
-				a=0;
+				System.exit(0);
 				break;
 			}
 			case 1: {
@@ -25,8 +31,9 @@ public class menu1 {
 				n = sc.nextInt();
 				System.out.println("them sinh vien");
 				for (int i = 0; i < n; i++) {
-					cn[i] = new SinhVien();
-					cn[i].nhap();
+				SinhVien sv1=new SinhVien();
+					sv1.nhap(sv);
+					sv.add(sv1);
 				}
 				break;
 			}
@@ -37,46 +44,59 @@ public class menu1 {
 					System.out.println("moi nhap id can Update");
 					c = sc.nextInt();
 					for (int i = 0; i < n; i++) {
-						cn[i].update(c);
+						SinhVien t = sv.get(i);
+						if( c == t.getId()) {
+							SinhVien sv1=new SinhVien();
+							sv1.nhap(sv);
+							sv.set(i, sv1 );
+							System.out.println("da update thanh cong!");
+							break;
+						}
+						else System.out.println("khong ton tai phan tu!");
+						
 					}
 				}
 				break;
 			}
 			case 3: {
-				int c, i, k;
-				System.out.println("vi tri can xoa la:");
+				int c;
+				System.out.println("moi nhap id can Xoa");
 				c = sc.nextInt();
-				for (k = i = 0; i < n; i++) {
-					if (cn[i].getId() != c) {
-						cn[k] = cn[i];
-						k++;
+				for (int i = 0; i < n; i++) {
+					SinhVien t=sv.get(i);
+					if(c==t.getId()) {
+						sv.remove(i);
+						System.out.println("da xoa thanh cong");
+						break;
 					}
+					else System.out.println("khong ton tai id");
 				}
-				n = k;
 				break;
 			}
 
 			case 4: {
 				System.out.println("sap xep theo ten");
 				for (int i = 0; i < n; i++) {
-					for (int j = i + 1; j < n; j++) {
-						if (cn[i].getName().compareTo(cn[j].getName()) > 0) {
-							SinhVien s = cn[i];
-							cn[i] = cn[j];
-							cn[j] = s;
+					sv.sort(new Comparator<SinhVien>() {
+
+						@Override
+						public int compare(SinhVien sv1, SinhVien sv2) {
+							// TODO Auto-generated method stub
+							return sv1.getName().compareTo(sv2.getName());
 						}
-					}
+					});
+					System.out.println("da sap xep");;
 				}
 				break;
 			}
 			case 5: {
 				System.out.println("hien thi");
-				for (int i = 0; i < n; i++) {
-					cn[i].xuat();
+				for(SinhVien sv2:sv){
+					sv2.xuat();
 				}
 				break;
 			}
-//			default:System.out.println("ket thuc!");break;
+			default:System.out.println("khong tim thay lua chon!!!");break;
 			}
 		}
 	}
