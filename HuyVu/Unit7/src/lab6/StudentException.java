@@ -27,10 +27,10 @@ public class StudentException extends Exception{
 			throw new StudentException("Tuoi lon hon 100 :");
 		}
 	}
-	static void checkDiem(double diemSinhVien) throws StudentException {
-		if (diemSinhVien < 0 ) {
+	static void checkDiem(double diem) throws StudentException {
+		if (diem < 0.0 ) {
 			throw new StudentException("Diem nhon hon 0 ");
-		}else if (diemSinhVien > 10){
+		}else if (diem > 10.0){
 			throw new StudentException("Diem lon hon 10 ");
 		}
 	}

@@ -32,8 +32,9 @@ public class Main {
 			}else if (chon==2) {
 				System.out.println("Xuat danh sach sinh vien : ");
 				for(SinhVien sv : arrayListSinhVien) {
-					System.out.println("|"+arrayListSinhVien.toString());
+					
 				}
+				System.out.println("|"+arrayListSinhVien.toString());
 			}
 		}
 

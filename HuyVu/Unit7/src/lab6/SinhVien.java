@@ -62,18 +62,18 @@ public class SinhVien {
 		idSinhVien = Integer.parseInt(scanner.nextLine());
 		try {
 			StudentException.checkMaSinhVien(idSinhVien);
-		} catch (StudentException e3) {
+		} catch (StudentException e) {
 			// TODO Auto-generated catch block
-			e3.printStackTrace();
+			e.printStackTrace();
 		}
 		
 		System.out.println("Nhap ten sinh vien : ");
 		tenSinhVien = scanner.nextLine();
 		try {
 			StudentException.checkTenSinhVien(tenSinhVien);
-		} catch (StudentException e2) {
+		} catch (StudentException e1) {
 			// TODO Auto-generated catch block
-			e2.printStackTrace();
+			e1.printStackTrace();
 		}
 		
 		
@@ -81,18 +81,18 @@ public class SinhVien {
 		tuoiSinhVien = Integer.parseInt(scanner.nextLine());
 		try {
 			StudentException.checkTuoi(tuoiSinhVien);
-		} catch (StudentException e1) {
+		} catch (StudentException e2) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+			e2.printStackTrace();
+		} 
 
 		System.out.println("Nhap diem sinh vien");
 		diemSinhVien = Double.parseDouble(scanner.nextLine());
 		try {
 			StudentException.checkDiem(diemSinhVien);
-		} catch (StudentException e) {
+		} catch (StudentException e3) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e3.printStackTrace();
 		}
 
 	}

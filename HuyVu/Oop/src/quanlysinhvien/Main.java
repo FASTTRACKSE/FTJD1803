@@ -1,5 +1,6 @@
 package quanlysinhvien;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,14 +11,20 @@ public class Main {
 	
 		String chon = null;
 		boolean exit = false;
-		int studentId;
+		QuanLySinhVien quanLySinhVien = new QuanLySinhVien();
+		int sinhVienId;
 		
 		showMenu();
 		while(true) {
 			chon = sr.nextLine();
 			switch (chon) {
 			case "1":
-				System.out.println("Them sinh vien");
+				try {
+					quanLySinhVien.add();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case "2":
 				System.out.println("Them sinh vien");
@@ -30,6 +37,10 @@ public class Main {
 				break;
 			case "5":
 				System.out.println("Them sinh vien");
+				break;
+			case "6":
+				System.out.println("Hien thi danh sach sinh vien");
+				quanLySinhVien.show();
 				break;
 			case "0":
 				System.out.println("Thoat");

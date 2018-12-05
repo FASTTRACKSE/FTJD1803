@@ -1,19 +1,23 @@
 package quanlysinhvien;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
-public class StudentDao {
+public class SinhVienDao {
 	private final static String STUDENT_FILE_NAME = "student.txt";
 	
 	// Ghi thông tin danh sách sinh viên vào file
 	
-	public void write(List<Students> studentsList) throws IOException {
+	public void write(List<SinhVien> studentsList) throws IOException {
 		
 		try {
 			FileOutputStream fileOutputStream = new FileOutputStream(STUDENT_FILE_NAME);
@@ -26,6 +30,28 @@ public class StudentDao {
 			
 			
 		}
+		
+	}
+	// Doc danh sach thong tin sinh vien
+	public List<SinhVien> read(){
+		List<SinhVien> listSinhVien = new ArrayList<>();
+		FileInputStream fileInputStream = null;
+		ObjectInputStream objectInputStream = null;
+		try {
+			fileInputStream = new FileInputStream(new File(STUDENT_FILE_NAME));
+			objectInputStream = new ObjectInputStream(fileInputStream);
+			listSinhVien = (List<SinhVien>) objectInputStream.readObject();
+		}catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}finally {
+			closeStream(fileInputStream);
+			closeStream(objectInputStream);
+		}
+		return listSinhVien;
 		
 	}
 
