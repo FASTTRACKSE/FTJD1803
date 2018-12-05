@@ -1,14 +1,19 @@
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SinhVien {
+public class SinhVien implements Serializable {
 	private int id;
 	private String name;
 	private int age;
 	private String address;
 	private float gpa;
-	private Scanner sc = new Scanner(System.in);
 
 	public int getId() {
 		return id;
@@ -51,7 +56,7 @@ public class SinhVien {
 	}
 
 	public void nhap(ArrayList<SinhVien> arr) {
-		
+		Scanner sc=new Scanner (System.in);
 		kiemtraID(arr);
 		kiemtraTen();
 		kiemtraTuoi();
@@ -66,9 +71,11 @@ public class SinhVien {
 				this.address, this.gpa);
 	}
 	void kiemtraID(ArrayList<SinhVien> arr) {
+		Scanner sc=new Scanner (System.in);
 		while(true) {
 			try {
 				System.out.println("nhap ID:");
+				
 				this.id = Integer.parseInt(sc.nextLine());
 				SinhVienException.checkMASV(this.id, arr);break;
 			} catch (SinhVienException e1) {
@@ -82,7 +89,9 @@ public class SinhVien {
 			}
 	}
 	void kiemtraTen() {
+		Scanner sc=new Scanner (System.in);
 		while(true) {
+	
 			try {
 				System.out.println("nhap name:");
 				this.name = sc.nextLine();
@@ -94,7 +103,9 @@ public class SinhVien {
 			}
 	}
 	void kiemtraTuoi() {
+		Scanner sc=new Scanner (System.in);
 		while(true) {
+			
 			try {
 				System.out.println("nhap age:");
 				this.age = Integer.parseInt(sc.nextLine());
@@ -106,7 +117,9 @@ public class SinhVien {
 			}
 	}
 	void kiemtraGpa() {
+		Scanner sc=new Scanner (System.in);
 		while(true) {
+		
 			try {
 				System.out.println("nhap gpa:");
 				this.gpa = Integer.parseInt(sc.nextLine());
@@ -117,5 +130,6 @@ public class SinhVien {
 			}
 			}
 	}
+
 	
 }

@@ -1,3 +1,10 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -11,7 +18,7 @@ public class menu1 {
 		ArrayList<SinhVien> sv=new ArrayList<SinhVien>();
 		
 		System.out.println("1. them sinh vien\n" + "2. cap nhat thong tin\r\n" + "3. xoa sinh vien\r\n"
-				+ "4. sap xep\r\n" + "5. Hien thi.\r\n" + "0. Exit");
+				+ "4. sap xep\r\n" + "5. Hien thi.\r\n"  + "6. Doc File.\r\n"+ "7.Luu File\r\n"+"0. Exit");
 		int n = 0;
 		int b, a = 1;
 		Scanner sc = new Scanner(System.in);
@@ -96,8 +103,42 @@ public class menu1 {
 				}
 				break;
 			}
+			case 6:{
+				System.out.println("ghi file");
+				
+				try {
+					FileOutputStream fos = new FileOutputStream("my.txt");
+					ObjectOutputStream oos =new ObjectOutputStream(fos);
+					oos.writeObject(sv);
+					System.out.println("ghi file thanh cong!");
+					oos.close();
+					
+				} catch (Exception e) {
+					System.out.println("nhap sai!");
+				}
+			}break;
+			case 7:{
+				FileInputStream fis =null;
+				ObjectInputStream ois =null;
+				try {
+					fis = new FileInputStream("my.txt");
+					ois = new ObjectInputStream(fis);
+					sv = (ArrayList<SinhVien>)ois.readObject();
+					System.out.println("doc file thanh cong!");
+					for(SinhVien sv2:sv){
+						sv2.xuat();
+					}
+					ois.close();
+					fis.close();
+				} catch (Exception e) {
+					System.out.println("co loi: "+e);
+				}
+			}break;
 			default:System.out.println("khong tim thay lua chon!!!");break;
 			}
 		}
 	}
+
+
+
 }
