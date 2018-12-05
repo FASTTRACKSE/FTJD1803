@@ -1,11 +1,10 @@
-package assignment_5;
+package assignment_6;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-import lab5.Student;
 
 public class Main {
 
@@ -44,9 +43,9 @@ public class Main {
 			}else if(chon==2) {
 				System.out.println("Xuat danh sach can bo : ");
 				for (ThongTinCanBo ttcb : arrayList) {
-					System.out.println(arrayList.toString());
+					
 				}
-				
+				System.out.println(arrayList.toString());
 
 			}else if(chon==3) {
 				for(int i = 0 ; i < n ; i++) {
@@ -91,5 +90,7 @@ public class Main {
 		System.out.println("| 4 . Sắp xếp cán bộ theo lương, nếu lương bằng thì sắp xếp theo tên ");
 		System.out.println("| 5 . Thoat ");
 	}
+
+	
 
 }

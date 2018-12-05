@@ -1,5 +1,6 @@
 package quanlysinhvien;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,26 +11,38 @@ public class Main {
 	
 		String chon = null;
 		boolean exit = false;
-		int studentId;
+		QuanLySinhVien quanLySinhVien = new QuanLySinhVien();
+		int sinhVienId;
 		
 		showMenu();
 		while(true) {
 			chon = sr.nextLine();
 			switch (chon) {
 			case "1":
-				System.out.println("Them sinh vien");
+				try {
+					quanLySinhVien.add();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case "2":
-				System.out.println("Them sinh vien");
+				sinhVienId = quanLySinhVien.inputId();
+                quanLySinhVien.edit(sinhVienId);
 				break;
 			case "3":
-				System.out.println("Them sinh vien");
+				sinhVienId = quanLySinhVien.inputId();
+				quanLySinhVien.delete(sinhVienId);
 				break;
 			case "4":
-				System.out.println("Them sinh vien");
+				quanLySinhVien.sapDiemSinhVien();
 				break;
 			case "5":
-				System.out.println("Them sinh vien");
+				quanLySinhVien.sapXepTenSinhVien();
+				break;
+			case "6":
+				System.out.println("Hien thi danh sach sinh vien");
+				quanLySinhVien.show();
 				break;
 			case "0":
 				System.out.println("Thoat");
@@ -47,9 +60,10 @@ public class Main {
 		System.out.println(" 1 : Them sinh vien ");
 		System.out.println(" 2 : Cap nhap thong tin sinh vien theo ID ");
 		System.out.println(" 3 : Xoa sinh vien theo ID ");
-		System.out.println(" 4 : Sap xep sinh vien theo ten ");
-		System.out.println(" 5 : Hien thi danh sach sinh vien ");
-		System.out.println(" 6 : Ket thuc chuong trinh ");
+		System.out.println(" 4 : Sap xep diem sinh vien theo ten ");
+		System.out.println(" 5 : Sap xep ten sinh vien theo ten ");
+		System.out.println(" 6 : Hien thi danh sach sinh vien ");
+		System.out.println(" 0 : Ket thuc chuong trinh ");
 		System.out.println("/****************************************/");
 		System.out.println("/*********** Moi ban chon lai ***********/");
 		
