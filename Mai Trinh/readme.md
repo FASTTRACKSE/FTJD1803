@@ -9,4 +9,5 @@ Phan 1:
 6. Sap xep tinh diem: <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/Mang/src/SapXepTinhDiem.java"> sapxep </a>
 7. Quan li sinh vien: <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Assignment3/src"> Assignment3 </a>
 8. Lab4 bai 1: <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Lab4/src"> bai1L4 </a>
+   Lab4 bai 2: <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Lab4/src/bai2" bai2L4 </a>
 9. Assignment 4: 
