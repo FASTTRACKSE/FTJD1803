@@ -78,7 +78,12 @@ package lad5;
 			 
 			 System.out.println("Nhap diem java ");
 			 diemJava = scanner.nextFloat();
-			 
+			 try {
+				StudentException.checkDiem(diemJava);
+			} catch (StudentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			 diemTrungBinh = (float)((this.diemHtml+this.diemJava)/2);
 		}
 		

@@ -1,11 +1,11 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, IOException {
 		// TODO Auto-generated method stub
-		menu1 m=new menu1();
-		m.show();
+		menu1.show();
 	}
 
 }
