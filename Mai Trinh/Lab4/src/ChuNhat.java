@@ -3,12 +3,14 @@ public class ChuNhat {
 	private int rong;
 	private int dai;
 	
-	public float getChuVi() {
-		return (dai+rong)*2;
+	public ChuNhat(int rong, int dai) {
+		super();
+		this.rong = rong;
+		this.dai = dai;
 	}
-	
-	public double getDienTich() {
-		return dai*rong;
+
+	public ChuNhat() {
+		super();
 	}
 	
 	public int getRong() {
@@ -27,17 +29,17 @@ public class ChuNhat {
 		this.dai = dai;
 	}
 
+	public float getChuVi() {
+		return (dai+rong)*2;
+	}
+	
+	public double getDienTich() {
+		return dai*rong;
+	}
+		
 	public void xuat() {
 		System.out.println("Chieu rong: "+this.rong+"	Chieu dai: "+this.dai+"	Dien tich: "+this.getDienTich()+"	Chu vi: "+this.getChuVi());
 	}
 
-	public ChuNhat(int rong, int dai) {
-		super();
-		this.rong = rong;
-		this.dai = dai;
-	}
-
-	public ChuNhat() {
-		super();
-	}
+	
 }
