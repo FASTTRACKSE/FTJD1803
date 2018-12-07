@@ -59,7 +59,6 @@ public class NhanVien {
 		System.out.println("Nhap ten :");
 		hoTen = scanner.nextLine();
 		
-		
 		System.out.println("Nhap email :");
 		email = scanner.nextLine();
 		
