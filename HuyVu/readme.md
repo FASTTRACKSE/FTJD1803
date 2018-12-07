@@ -14,7 +14,18 @@ Bai tap 2 : Menu students <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/
 
 <h1> ******    OOP2    ********* </h1></br>
 
-Bai tap 1 (Lab 4) : Chu vi & Dien tich (Hinh vuong va hinh chu nhat) <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/Main.java">Chu vi & Dien tich (Hinh vuong va hinh chu nhat)</a></br>
-                    Class Vuong <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/Vuong.java">Vuong</a></br>
-                    Class ChuNhat <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Oop2/src/hinh/ChuNhat.java">Chunhat</a></br>
+-------------- Lab 4 ---------------</br>
+Bai tap 1 (Lab 4) : Bai 1 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/hinh"> Bai 1</a></br>
+Bai tap 2 (Lab 4) : Bai 2 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/sinhvienfpt"> Bai 2 </a></br>
+Bai tap 3 (Lab 4) : Bai 3 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/Bai3"> Bai 3</a></br>
+Bai tap 4 (Lab 4) : Bai 4 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/Bai4"> Bai 4</a></br>
+Bài Assignment 4  : Assignment 4 <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/assignment_4">Assignment 4</a></br>
+-------------- Lab 5 ---------------</br>
+Bai tap 1 (lab 5) : Bai 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5">Bai 1</a></br>
+Bai tap 2 (lab 5) : Bai 2 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Oop2/src/lab5_2">Bai 2</a></br>
+Bài Assignment 5  : Assignment 5 <a href="">Bài Assignment 5</a>
 
+-------------- Lab 6 ---------------</br>
+Bài tập 1 (lab 6) : Bài 1 :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Unit7/src/lab6">Bài 1</a></br>
+Bai Assignment 6 :  Bai Assignment 6 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Unit7/src/assignment_6
+"> Assignment 6 </a>
