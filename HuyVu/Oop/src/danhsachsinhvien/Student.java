@@ -3,8 +3,6 @@ package danhsachsinhvien;
 import java.awt.event.ItemEvent;
 import java.util.Scanner;
 
-
-
 public class Student {
 
 	String hoTen;
