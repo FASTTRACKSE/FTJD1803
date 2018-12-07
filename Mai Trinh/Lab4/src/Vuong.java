@@ -8,12 +8,9 @@ public class Vuong extends ChuNhat {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	
 	public Vuong() {
 	
 	}
-
 
 	public int getCanh() {
 		return super.getDai();
@@ -31,6 +28,6 @@ public class Vuong extends ChuNhat {
 //		return canh*canh;
 //	}
 	public void xuat() {
-		System.out.println("Canh hinh vuong: "+this.getCanh()+"	Dien tich: "+this.getDienTich()+"---Chu vi: "+this.getChuVi());
+		System.out.println("Canh hinh vuong: "+this.getCanh()+"		Dien tich: "+this.getDienTich()+"	Chu vi: "+this.getChuVi());
 	}
 }
