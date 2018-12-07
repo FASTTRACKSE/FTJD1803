@@ -41,6 +41,10 @@ public class BienLai extends KhachHang {
 		this.thanhTien = thanhTien;
 	}
 	
+	public double tinhTien() {
+		return (this.soMoi-this.soCu)*750;
+	}
+	
 	public void nhap() {
 		Scanner sc = new Scanner(System.in);
 		super.nhap();
@@ -53,14 +57,11 @@ public class BienLai extends KhachHang {
 	
 	public void xuat() {
 		 super.xuat();
-		System.out.println("Chi so cu: "+this.getSoCu()+"\nChi so  moi: "+this.getSoMoi());
+		System.out.println("Chi so cu: "+this.getSoCu()+"\nChi so  moi: "+this.getSoMoi()+"\nSo tien phai tra: "+this.tinhTien());
 		
 	}
 	
-	public void tinhTien() {
-		this.thanhTien = (this.soMoi-this.soCu)*750;
-	}
-	
+
 	
 	
 }
