@@ -83,13 +83,22 @@
  </tr>
    <tr>
   <td>
-   Exception
+   Bài tập về nhà 3
    </td>
   <td rowpan=2>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/menu1.java"> link</a><br>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/SinhVienException.java"> link</a><br>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/SinhVien.java"> link</a><br>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/Main.java"> link</a>
+  </td>
+ </tr>
+  
+   </td>
+     <td>
+  Assignment 7
+   </td>
+  <td rowpan=2>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV1/src"> link</a><br>
   </td>
  </tr>
 

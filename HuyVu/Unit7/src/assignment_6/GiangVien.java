@@ -89,11 +89,14 @@ public class GiangVien extends ThongTinCanBo{
 				soTietDay = scanner.nextInt();
 				if(soTietDay<0) {
 					throw new Exception();
+					
 				}
 				return soTietDay;
+				
 			}catch(Exception e) {
 				System.out.println("Ban nhap so tiet day sai , vui long nhap lai :");
 			}
+			
 		}
 	}
 	

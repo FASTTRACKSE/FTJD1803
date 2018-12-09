@@ -1,26 +1,39 @@
 package assignment_6;
 
+import java.awt.Container;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.naming.NameNotFoundException;
 
 public class ThongTinCanBo {
+	private int id;
 	private String hoTen;
 	private double heSoLuong;
 	private int phuCap;
-	
+
 	Scanner scanner = new Scanner(System.in);
-	
+
 	public ThongTinCanBo() {
-		
+
 	}
 
-	public ThongTinCanBo(String hoTen,double heSoLuong, int phuCap) {
+	public ThongTinCanBo(int id,String hoTen,double heSoLuong, int phuCap) {
 		super();
+		this.id = id;
 		this.hoTen = hoTen;
-		
 		this.heSoLuong = heSoLuong;
 		this.phuCap = phuCap;
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getHoTen() {
@@ -46,18 +59,34 @@ public class ThongTinCanBo {
 	public void setPhuCap(int phuCap) {
 		this.phuCap = phuCap;
 	}
-	
+
 	public void nhap() {
-		
+
+		int id = nhapId();
 		String hoTen = nhapTen();
-		double heSoLuong = nhapheSoLuong();
-//		System.out.println("Nhap ho va ten : ");
-//		this.hoTen = scanner.nextLine();
-//		System.out.println("Nhap he so luong : ");
-//		this.heSoLuong = Double.parseDouble(scanner.nextLine());
-		
+		double heSoLuong = nhapHeSoLuong();
+
+
 	}
-	
+	private int nhapId() {
+		String s;
+		System.out.println("Nhap ma can bo :");
+		while(true) {
+			try {
+				id = Integer.parseInt(scanner.nextLine());
+				s = String.valueOf(id);
+				if(s.equals(null)) {
+					throw new Exception();
+				}
+				return id;
+			}catch(Exception e) {
+				System.out.println("Ma rong , vui long nhap lai");
+			}
+		}
+
+	}
+
+
 	private String nhapTen() {
 		System.out.println("Nhap ho va ten :");
 		while(true) {
@@ -67,8 +96,11 @@ public class ThongTinCanBo {
 					throw new NameNotFoundException();
 				}else if (hoTen.length()>40) {
 					throw new Exception();
+
 				}
+
 				return hoTen;
+
 			} catch (NameNotFoundException e) {
 				System.out.println("Ten khong duoc rong , vui long nhap lai :");
 			} catch(Exception e) {
@@ -76,8 +108,8 @@ public class ThongTinCanBo {
 			}
 		}
 	}
-	
-	private double nhapheSoLuong() {
+
+	private double nhapHeSoLuong() {
 		System.out.println("Nhap he so luong : ");
 		while(true) {
 			try {
@@ -91,14 +123,14 @@ public class ThongTinCanBo {
 			}
 		}
 	}
-	
+
 	public double tinhLuong() {
 		return 0;
 	}
 
 	@Override
 	public String toString() {
-		return "ThongTinCanBo [hoTen=" + hoTen + ", heSoLuong=" + heSoLuong + ", phuCap="
+		return "ThongTinCanBo [id=" + id + ",hoTen=" + hoTen + ", heSoLuong=" + heSoLuong + ", phuCap="
 				+ phuCap + "]";
 	}
 }
