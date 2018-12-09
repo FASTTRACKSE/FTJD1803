@@ -24,7 +24,7 @@ public class SinhVien1 {
 		this.hoTen=sc.nextLine();
 		System.out.println("nhap diem");
 		checkDiem();
-		System.out.println("ngay/thang/nam:");
+		System.out.println("ngay-thang-nam:");
 		String a=sc.nextLine();
 		this.ngay=Day(a);
 	}
@@ -36,7 +36,7 @@ public class SinhVien1 {
 	void checkDiem() {
 		while(true) {
 			try {
-				this.diem=sc.nextFloat();
+				this.diem=Float.parseFloat(sc.nextLine());
 				DayException.diem(diem);break;
 			} catch (Exception e) {
 				// TODO: handle exception
