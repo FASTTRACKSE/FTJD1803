@@ -103,7 +103,7 @@
  </tr>
    <tr>
      <td>
-  Thi thu
+  Thi thử
    </td>
   <td rowpan=2>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Shop"> link</a>
