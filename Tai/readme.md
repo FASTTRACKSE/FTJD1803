@@ -106,7 +106,7 @@
   Thi thu
    </td>
   <td rowpan=2>
-   <a href=" https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Shop"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Shop"> link</a>
   </td>
  </tr>
 
