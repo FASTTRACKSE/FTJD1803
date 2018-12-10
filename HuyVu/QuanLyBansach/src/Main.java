@@ -11,6 +11,7 @@ public class Main {
 		boolean exit = false;
 		QuanLySach quanLySach = new QuanLySach();
 		
+		
 		showMenu();
 		while(true) {
 			chon = sr.nextLine();
@@ -43,9 +44,12 @@ public class Main {
 
 			case "5":
 				quanLySach.timKiemNXB();
-				quanLySach.timKiemDM();
 				break;
 			case "6":
+				quanLySach.timKiemDM();
+				break;
+			case "7":
+				System.out.println("Doanh thu ban sach :");
 				
 				break;
 			case "0":
@@ -68,8 +72,9 @@ public class Main {
 		System.out.println(" 2 : Hien thi danh sach trong kho ");
 		System.out.println(" 3 : Thực hiện chức năng bán sách. Sách bán được lưu vào trong 1 danh sách riêng để lưu lịch sử bán ");
 		System.out.println(" 4 : Sắp xếp sách theo đơn giá");
-		System.out.println(" 5 : Tìm sách theo nhà xuất bản, theo danh mục. ");
-		System.out.println(" 6 : Tinh tổng doanh thu bán sách ");
+		System.out.println(" 5 : Tìm sách theo nhà xuất bản ");
+		System.out.println(" 6 : Tim sach theo danh muc : ");
+		System.out.println(" 7 : Tinh tong so tien ban sach : ");
 		System.out.println(" 0 : Ket thuc chuong trinh ");
 		System.out.println("/****************************************/");
 		System.out.println("/*********** Moi ban chon lai ***********/");

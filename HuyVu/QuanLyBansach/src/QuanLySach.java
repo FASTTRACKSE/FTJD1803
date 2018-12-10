@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.naming.NameNotFoundException;
+
 public class QuanLySach {
 
 	public static Scanner scanner = new Scanner(System.in);
@@ -19,37 +21,104 @@ public class QuanLySach {
 
 	public int nhapIdSach() {
 		System.out.println("Nhap ma sach :");
-		return Integer.parseInt(scanner.nextLine());
+		while(true) {
+			try {
+				int id = Integer.parseInt(scanner.nextLine());
+				return id;
+			}catch(NumberFormatException e) {
+				System.out.println("Ma sach la kieu so , xin vui long nhap lai :");
+			}
+		}
+		
 	}
 
 	private String nhapTenSach() {
 		System.out.println("Nhap ten sach :");
-		return scanner.nextLine();
+		while(true) {
+			try {
+				String ten = scanner.nextLine();
+				if(ten.isEmpty()) {
+					throw new NameNotFoundException();
+				}
+				return ten;
+			} catch (NameNotFoundException e) {
+				System.out.println("Ten sach khong duoc rong , vui long nhap lai :");
+			}
+		}
+		
 	}
 
 	private String nhapTenTacGia() {
 		System.out.println("Nhap tac gia :");
-		return scanner.nextLine();
+		while(true) {
+			try {
+				String ten = scanner.nextLine();
+				if(ten.isEmpty()) {
+					throw new NameNotFoundException();
+				}
+				return ten;
+			} catch (NameNotFoundException e) {
+				System.out.println("Ten tac gia khong duoc rong , vui long nhap lai :");
+			}
+		}
 	}
 
 	private int nhapNamXuatBan() {
 		System.out.println("Nhap nam xuat ban");
-		return Integer.parseInt(scanner.nextLine());
+		while(true) {
+			try {
+				int namXuatBan = Integer.parseInt(scanner.nextLine());
+				return namXuatBan;
+			} catch (NumberFormatException e) {
+				System.out.println("Nam xuat ban la kieu so , vui long nhap lai :");
+			}
+		}
+		
 	}
 
 	private String nhapNhaXuatBan() {
 		System.out.println("Nhap nha xuat ban :");
-		return scanner.nextLine();
+		while(true) {
+			try {
+				String ten = scanner.nextLine();
+				if(ten.isEmpty()) {
+					throw new NameNotFoundException();
+				}
+				return ten;
+			} catch (NameNotFoundException e) {
+				System.out.println("Nha xuat ban khong duoc rong , vui long nhap lai :");
+			}
+		}
 	}
 
 	private String nhapDanhMuc() {
 		System.out.println("Nhap danh muc :");
-		return scanner.nextLine();
+		while(true) {
+			try {
+				String ten = scanner.nextLine();
+				if(ten.isEmpty()) {
+					throw new NameNotFoundException();
+				}
+				return ten;
+			} catch (NameNotFoundException e) {
+				System.out.println("Danh muc khong duoc rong , vui long nhap lai :");
+			}
+		}
 	}
 
 	private double nhapDonGia() {
 		System.out.println("Nhap don gia :");
-		return Double.parseDouble(scanner.nextLine());
+		while(true) {
+			try {
+				double donGia = Double.parseDouble(scanner.nextLine());
+				if(donGia<0) {
+					throw new NumberFormatException();
+				}
+				return donGia;
+			} catch (NumberFormatException e) {
+				System.out.println("Ban da nhap sai don gia , xin vui long nhap lai :");
+			}
+		}
 	}
 
 	private float tongDoanhThu() {
@@ -147,6 +216,5 @@ public class QuanLySach {
 			System.out.printf("id = ",id);
 		}
 	}
-
 
 }
