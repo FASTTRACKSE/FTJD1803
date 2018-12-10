@@ -5,17 +5,19 @@ public class Main {
 	public static Scanner sr = new Scanner(System.in);
 
 	public static void main(String[] args) {
-
-		int chon;
+		
+		String chon=null;
+		int sachId;
 		boolean exit = false;
 		QuanLySach quanLySach = new QuanLySach();
-
+		
 		showMenu();
 		while(true) {
-			chon = Integer.parseInt(sr.nextLine());
+			chon = sr.nextLine();
 			switch (chon) {
-			
-			case 1:
+
+			case "1":
+				
 				try {
 					quanLySach.nhap();
 				} catch (IOException e) {
@@ -23,33 +25,36 @@ public class Main {
 					e.printStackTrace();
 				}
 				break;
-			
-			case 2:
+
+			case "2":
 				System.out.println("Hien thi sach trong kho : ");
 				quanLySach.xuat();
 				break;
-			
-			case 3:
+
+			case "3":
+				sachId = quanLySach.nhapIdSach();
+				quanLySach.banSach(sachId);
 				break;
-			
-			case 4:
+
+			case "4":
 				quanLySach.sapXepTheoDonGia();
+				quanLySach.xuat();
 				break;
-			
-			case 5:
+
+			case "5":
 				quanLySach.timKiemNXB();
 				quanLySach.timKiemDM();
 				break;
-			
-			case 6:
+			case "6":
+				
 				break;
-			
-			case 0:
+			case "0":
 				System.out.println("Thoat");
 				exit=true;
 				break;
 
 			default:
+				System.out.println("Khong hop le ! Moi ban chon lai menu :");
 				break;
 			}
 			showMenu();
