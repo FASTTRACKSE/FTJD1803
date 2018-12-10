@@ -28,6 +28,20 @@ public class SachDao {
 			e.printStackTrace();
 		}finally{
 
+		}
+
+	}
+
+	// Ghi thông tin sach vao kho vào file
+	public void write1(List<Sach> listSach) throws IOException {
+
+		try {
+			FileOutputStream fileOutputStream = new FileOutputStream(BAN_SACH_FILE_NAME);
+			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+			objectOutputStream.writeObject(listSach);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally{
 
 		}
 
@@ -55,7 +69,7 @@ public class SachDao {
 		return listSach;
 
 	}
-	
+
 	private void closeStream(InputStream is) {
 		if (is != null) {
 			try {

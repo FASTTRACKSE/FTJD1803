@@ -138,7 +138,7 @@ public class QuanLySach {
 		}if(sach!=null) {
 			listSach.remove(sach);
 			try {
-				sachDao.write(listSach);
+				sachDao.write1(listSach);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
