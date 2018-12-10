@@ -8,4 +8,6 @@
 <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Quang%20Hieu/HelloJava/src/Menu.java"> LINK </a>
 <h1> Lab 4 Bai 1 </h1>
 <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Quang%20Hieu/HelloJava/src/Hinh"> LINK </a>
+<h1> Lab 6 Menu </h1>
+<a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Quang%20Hieu/Lab6/Lab6/Main.java"> LINK </a>
 <h2> OPP </h2>  
