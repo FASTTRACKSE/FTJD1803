@@ -33,7 +33,7 @@
    Tính tiền điện
    </td>
   <td>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/tinhtiendien.java"> link</a?
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/tinhtiendien.java"> link</a>
   </td>
  </tr>
      <tr>
@@ -93,12 +93,20 @@
   </td>
  </tr>
   
-   </td>
+   <tr>
      <td>
   Assignment 7
    </td>
   <td rowpan=2>
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV1/src"> link</a><br>
+  </td>
+ </tr>
+   <tr>
+     <td>
+  Thi thử
+   </td>
+  <td rowpan=2>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Shop"> link</a>
   </td>
  </tr>
 

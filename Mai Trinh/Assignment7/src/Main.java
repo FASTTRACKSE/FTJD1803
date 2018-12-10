@@ -130,7 +130,7 @@ public class Main {
 				System.out.println();
 				break;
 
-			case 6: 
+			case 7: 
 				FileInputStream fis= null;
 				ObjectInputStream ois = null;
 				try {
@@ -152,7 +152,7 @@ public class Main {
 				
 				break;
 
-			case 7: 
+			case 6: 
 				FileOutputStream fos= null;
 				ObjectOutputStream oos = null;
 			
