@@ -31,5 +31,5 @@ Bai Assignment 6 :  Bai Assignment 6 : <a href="https://github.com/FASTTRACKSE/F
 "> Assignment 6 </a></br>
 Bai Quan ly sach : Quan ly sach <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/QuanLyBansach">Quan ly ban sach</a></br>
 
--------------------------------------------------- Finish ---------------------------------------------------------------
-Bai thi project : Bai project quan ly cau lac bo <a href="">Project<a>
+-------------------------------------------------- Finish ---------------------------------------------------------------</br>
+Bai thi project : Bai project quan ly cau lac bo <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Project/src/quanlydoibong">Project<a>
