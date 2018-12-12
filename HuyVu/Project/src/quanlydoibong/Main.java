@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		double tongLuong = 0;
 		double luong;
 		Scanner scanner = new Scanner(System.in);
@@ -48,7 +48,7 @@ public class Main {
 						ct.xuat();
 					}
 				}
-				
+
 			}else if (chon==3) {
 				System.out.println("Hien thi danh sach huan luyen vien :");
 				for(Nguoi ng : arrayList) {
@@ -61,7 +61,7 @@ public class Main {
 			else if(chon==4) {
 				System.out.println("Xuat danh sach cau thu va huan luyen vien : ");
 				for (Nguoi ng : arrayList) {
-					
+
 				}
 				System.out.println(arrayList.toString());
 
@@ -77,9 +77,9 @@ public class Main {
 				for(Nguoi ng : arrayList) {
 					if(ng instanceof CauThu) {
 						CauThu ct = (CauThu)ng;
-					System.out.println("Ho va ten : " +ng.getHoTen());
-				}
+						System.out.println("Ho va ten : " +ng.getHoTen());
 					}
+				}
 			}
 			else if(chon==6) {
 				for(Nguoi ng : arrayList) {
@@ -89,13 +89,13 @@ public class Main {
 				System.out.println("Tong luong phai tra cho cau lac bo = " + tongLuong);
 
 			}else if (chon==7) {
-			
+
 			}else if(chon==0) {
 				System.exit(chon);
 			}
 		}
 
-}
+	}
 
 	public static void menu() {
 		System.out.println(">>       Chon Menu      <<");
@@ -109,6 +109,6 @@ public class Main {
 		System.out.println("| 7 . Tìm câu lạc bộ chi ngân sách cho cầu thủ và huấn luyện viên nhiều nhất ");
 		System.out.println("| 0 . Thoat ");
 	}
-	
+
 
 }

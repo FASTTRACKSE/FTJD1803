@@ -8,6 +8,7 @@ public class Nguoi {
 	
 	private String hoTen;
 	private double luong;
+	private String cauLacBo;
 	
 	
 	Scanner scanner = new Scanner(System.in);
@@ -16,10 +17,11 @@ public class Nguoi {
 		
 	}
 
-	public Nguoi(String hoTen, double luong) {
+	public Nguoi(String hoTen, double luong,String cauLacBo) {
 		super();
 		this.hoTen = hoTen;
 		this.luong = luong;
+		this.cauLacBo = cauLacBo;
 		
 	}
 
@@ -38,9 +40,15 @@ public class Nguoi {
 	public void setLuong(double luong) {
 		this.luong = luong;
 	}
+	
+	public String getCauLacBo() {
+		return cauLacBo;
+	}
 
-	
-	
+	public void setCauLacBo(String cauLacBo) {
+		this.cauLacBo = cauLacBo;
+	}
+
 	public double tinhLuong() {
 		return 0;
 	}
@@ -49,6 +57,7 @@ public class Nguoi {
 		
 		String hoTen = nhapTen();
 		double luong = nhapLuong();
+		String cauLacBo = nhapCauLacBo();
 	}
 	
 	private String nhapTen() {
@@ -84,6 +93,28 @@ public class Nguoi {
 				return luong;
 			}catch(Exception e) {
 				System.out.println("Ban nhap luong khong hop le ! Vui long nhap lai ");
+			}
+		}
+	}
+	
+	private String nhapCauLacBo() {
+		System.out.println("Nhap cau lac bo :");
+		while(true) {
+			try {
+				cauLacBo = scanner.nextLine();
+				if(cauLacBo.isEmpty()) {
+					throw new NameNotFoundException();
+				}else if (cauLacBo.length()>40) {
+					throw new Exception();
+
+				}
+
+				return cauLacBo;
+
+			} catch (NameNotFoundException e) {
+				System.out.println("Cau lac bo khong duoc rong , vui long nhap lai :");
+			} catch(Exception e) {
+				System.out.println("Cau lac bo khong dai qua 40 ky tu , vui long nhap lai :");
 			}
 		}
 	}

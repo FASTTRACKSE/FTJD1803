@@ -4,7 +4,6 @@ import javax.naming.NameNotFoundException;
 
 public class CauThu extends Nguoi{
 	private String queQuan;
-	private String cauLacBo;
 	private int tuoi;
 	private String viTriChoiBong;
 	private double thuong;
@@ -13,10 +12,9 @@ public class CauThu extends Nguoi{
 		
 	}
 
-	public CauThu(String queQuan, String cauLacBo, int tuoi, String viTriChoiBong,double thuong) {
+	public CauThu(String queQuan, int tuoi, String viTriChoiBong,double thuong) {
 		super();
 		this.queQuan = queQuan;
-		this.cauLacBo = cauLacBo;
 		this.tuoi = tuoi;
 		this.viTriChoiBong = viTriChoiBong;
 		this.thuong = thuong;
@@ -28,14 +26,6 @@ public class CauThu extends Nguoi{
 
 	public void setQueQuan(String queQuan) {
 		this.queQuan = queQuan;
-	}
-
-	public String getCauLacBo() {
-		return cauLacBo;
-	}
-
-	public void setCauLacBo(String cauLacBo) {
-		this.cauLacBo = cauLacBo;
 	}
 
 	public int getTuoi() {
@@ -65,7 +55,6 @@ public class CauThu extends Nguoi{
 	public void nhap() {
 		super.nhap();
 		String queQuan = nhapQueQuan();
-		String cauLacBo = nhapCauLacBo();
 		int tuoi = nhapTuoi();
 		String viTriChoiBong = nhapViTriChoiBong();
 		int thuong = nhapThuong();
@@ -96,27 +85,7 @@ public class CauThu extends Nguoi{
 		}
 	}
 	
-	private String nhapCauLacBo() {
-		System.out.println("Nhap cau lac bo :");
-		while(true) {
-			try {
-				cauLacBo = scanner.nextLine();
-				if(cauLacBo.isEmpty()) {
-					throw new NameNotFoundException();
-				}else if (cauLacBo.length()>40) {
-					throw new Exception();
-
-				}
-
-				return cauLacBo;
-
-			} catch (NameNotFoundException e) {
-				System.out.println("Cau lac bo khong duoc rong , vui long nhap lai :");
-			} catch(Exception e) {
-				System.out.println("Cau lac bo khong dai qua 40 ky tu , vui long nhap lai :");
-			}
-		}
-	}
+	
 	
 	private int nhapTuoi() {
 		System.out.println("Nhap tuoi :");
@@ -165,7 +134,7 @@ public class CauThu extends Nguoi{
 
 	@Override
 	public String toString() {
-		return "CauThu [queQuan=" + queQuan + ", cauLacBo=" + cauLacBo + ", tuoi=" + tuoi + ", viTriChoiBong="
+		return "CauThu [hoTen = " +this.getHoTen()+ " queQuan = " + queQuan + ", cauLacBo= " +this.getCauLacBo()+ ", tuoi= " + tuoi + ", viTriChoiBong="
 				+ viTriChoiBong + ", thuong=" + thuong + "]";
 	}
 	

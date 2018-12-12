@@ -6,20 +6,19 @@ import javax.naming.NameNotFoundException;
 
 public class HuanLuyenVien extends Nguoi{
 	private String quocTich;
-	private String cauLacBo;
 	private int tuoi;
-	private int phucap;
-	
+	private double phucap;
+
 	Scanner scanner = new Scanner(System.in);
-	
+
 	public HuanLuyenVien() {
-		
+
 	}
 
-	public HuanLuyenVien(String quocTich, String cauLacBo, int tuoi, int phucap) {
+	public HuanLuyenVien(String quocTich, String cauLacBo, int tuoi, double phucap) {
 		super();
 		this.quocTich = quocTich;
-		this.cauLacBo = cauLacBo;
+
 		this.tuoi = tuoi;
 		this.phucap = phucap;
 	}
@@ -32,13 +31,6 @@ public class HuanLuyenVien extends Nguoi{
 		this.quocTich = quocTich;
 	}
 
-	public String getCauLacBo() {
-		return cauLacBo;
-	}
-
-	public void setCauLacBo(String cauLacBo) {
-		this.cauLacBo = cauLacBo;
-	}
 
 	public int getTuoi() {
 		return tuoi;
@@ -48,22 +40,21 @@ public class HuanLuyenVien extends Nguoi{
 		this.tuoi = tuoi;
 	}
 
-	public int getPhucap() {
+	public double getPhucap() {
 		return phucap;
 	}
 
-	public void setPhucap(int phucap) {
+	public void setPhucap(double phucap) {
 		this.phucap = phucap;
 	}
-	
+
 	public void nhap() {
 		super.nhap();
 		String nhapQuocTich = nhapQuocTich();
-		String nhapCauLacBo = nhapCauLacBo();
 		int tuoi = nhapTuoi();
-		int nhapPhuCap = nhapPhuCap();
+		double nhapPhuCap = nhapPhuCap();
 	}
-	
+
 	private String nhapQuocTich() {
 		System.out.println("Nhap quoc tich :");
 		while(true) {
@@ -85,29 +76,7 @@ public class HuanLuyenVien extends Nguoi{
 			}
 		}
 	}
-	
-	private String nhapCauLacBo() {
-		System.out.println("Nhap cau lac bo :");
-		while(true) {
-			try {
-				cauLacBo = scanner.nextLine();
-				if(cauLacBo.isEmpty()) {
-					throw new NameNotFoundException();
-				}else if (cauLacBo.length()>40) {
-					throw new Exception();
 
-				}
-
-				return cauLacBo;
-
-			} catch (NameNotFoundException e) {
-				System.out.println("Cau lac bo khong duoc rong , vui long nhap lai :");
-			} catch(Exception e) {
-				System.out.println("Cau lac bo khong dai qua 40 ky tu , vui long nhap lai :");
-			}
-		}
-	}
-	
 	private int nhapTuoi() {
 		System.out.println("Nhap tuoi :");
 		while(true) {
@@ -122,23 +91,22 @@ public class HuanLuyenVien extends Nguoi{
 			}
 		}
 	}
-	
-	private int nhapPhuCap() {
-		return phucap = (int) (getLuong()*20/100);
+
+	private double nhapPhuCap() {
+		return (phucap=getLuong()*20/100);
 	}
-	
+
 	public double tinhLuong() {
 		return (double)(this.getLuong()+this.getPhucap());
 	}
 
 	@Override
 	public String toString() {
-		return "HuanLuyenVien [quocTich=" + quocTich + ", cauLacBo=" + cauLacBo + ", tuoi=" + tuoi + ", phucap="
-				+ phucap + "]";
+		return "HuanLuyenVien [hoTen="+this.getHoTen()+",quocTich=" + quocTich + ",cauLacBo="+this.getCauLacBo()+", tuoi=" + tuoi + ", phucap=" + phucap + "]";
 	}
-	
+
 	public void xuat() {
-		System.out.println("Ho va ten : "+this.getHoTen()+"Quoc tich :"+this.getQuocTich()+"Tuoi :"+this.getTuoi()+"Cau lac bo :"+this.getCauLacBo());
+		System.out.println("Ho va ten : " + this.getHoTen() + " Quoc tich : " + this.getQuocTich() + " Tuoi : " + this.getTuoi() + " Cau lac bo :" +  this.getCauLacBo());
 	}
-	
+
 }
