@@ -13,68 +13,83 @@ import java.util.List;
 
 
 public class SachDao {
-	
+
 	private final static String SACH_FILE_NAME = "khosach.txt";
-	
-		// Ghi thông tin danh sách sinh viên vào file
-		public void write(List<Sach> listSach) throws IOException {
-			
-			try {
-				FileOutputStream fileOutputStream = new FileOutputStream(SACH_FILE_NAME);
-				ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-				objectOutputStream.writeObject(listSach);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}finally{
-				
-				
-			}
-			
-		}
-		// Doc danh sach thong tin sinh vien
-		public List<Sach> read(){
-			List<Sach> listSach = new ArrayList<>();
-			FileInputStream fileInputStream = null;
-			ObjectInputStream objectInputStream = null;
-			try {
-				fileInputStream = new FileInputStream(new File(SACH_FILE_NAME));
-				objectInputStream = new ObjectInputStream(fileInputStream);
-				listSach = (List<Sach>) objectInputStream.readObject();
-			}catch(FileNotFoundException e) {
-				e.printStackTrace();
-			}catch(IOException e) {
-				e.printStackTrace();
-			}catch(ClassNotFoundException e) {
-				e.printStackTrace();
-			}finally {
-				closeStream(fileInputStream);
-				closeStream(objectInputStream);
-			}
-			return listSach;
-			
+	private final static String BAN_SACH_FILE_NAME = "bansach.txt";
+
+	// Ghi thông tin sach vao kho vào file
+	public void write(List<Sach> listSach) throws IOException {
+
+		try {
+			FileOutputStream fileOutputStream = new FileOutputStream(SACH_FILE_NAME);
+			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+			objectOutputStream.writeObject(listSach);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally{
+
 		}
 
-		
-		private void closeStream(InputStream is) {
-	        if (is != null) {
-	            try {
-	                is.close();
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
-	        }
-	    }
-	 
-	    
-	    private void closeStream(OutputStream os) {
-	        if (os != null) {
-	            try {
-	                os.close();
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
-	        }
-	    }
-	
-	
+	}
+
+	// Ghi thông tin sach vao kho vào file
+	public void write1(List<Sach> listSach) throws IOException {
+
+		try {
+			FileOutputStream fileOutputStream = new FileOutputStream(BAN_SACH_FILE_NAME);
+			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+			objectOutputStream.writeObject(listSach);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally{
+
+		}
+
+	}
+
+	// Doc thong tin sach nhap vao kho
+	public List<Sach> read(){
+		List<Sach> listSach = new ArrayList<>();
+		FileInputStream fileInputStream = null;
+		ObjectInputStream objectInputStream = null;
+		try {
+			fileInputStream = new FileInputStream(new File(SACH_FILE_NAME));
+			objectInputStream = new ObjectInputStream(fileInputStream);
+			listSach = (List<Sach>) objectInputStream.readObject();
+		}catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}finally {
+			closeStream(fileInputStream);
+			closeStream(objectInputStream);
+		}
+		return listSach;
+
+	}
+
+	private void closeStream(InputStream is) {
+		if (is != null) {
+			try {
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+	private void closeStream(OutputStream os) {
+		if (os != null) {
+			try {
+				os.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
 }

@@ -45,7 +45,7 @@ public class Main {
 			case 1: 
 				System.out.println("Nhap thong tin sach ");
 				Sach s= new Sach();
-				s.nhap();
+				s.nhap(sachList);
 				sachList.add(s);
 				break;
 				
@@ -72,12 +72,15 @@ public class Main {
 						sachban.setNamXBan(sachList.get(i).getNamXBan());
 						sachban.setNhaXBan(sachList.get(i).getNhaXBan());
 						sachban.setTacGia(sachList.get(i).getTacGia());
-						
+						sachList.remove(i);
 						break;
 					}
 				}
 				sachbanList.add(sachban);
 				
+				if (sachList.size()<1) {
+					System.out.println("Sach trong kho da het");
+				}
 				
 				
 				FileOutputStream fos= null;

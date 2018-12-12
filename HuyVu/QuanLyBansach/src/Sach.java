@@ -3,6 +3,7 @@ import java.util.Date;
 
 public class Sach implements Serializable{
 	
+	private int idSach;
 	private String tenSach;
 	private String tacGia;
 	private int namXuatBan;
@@ -16,9 +17,10 @@ public class Sach implements Serializable{
 		
 	}
 
-	public Sach(String tenSach, String tacGia, int namXuatBan, String nhaXuatBan, String danhMuc, double donGia,
+	public Sach(int idSach,String tenSach, String tacGia, int namXuatBan, String nhaXuatBan, String danhMuc, double donGia,
 			float tongDoanhThu) {
 		super();
+		this.idSach = idSach;
 		this.tenSach = tenSach;
 		this.tacGia = tacGia;
 		this.namXuatBan = namXuatBan;
@@ -26,6 +28,16 @@ public class Sach implements Serializable{
 		this.danhMuc = danhMuc;
 		this.donGia = donGia;
 		this.tongDoanhThu = tongDoanhThu;
+	}
+	
+	
+	
+	public int getIdSach() {
+		return idSach;
+	}
+
+	public void setIdSach(int idSach) {
+		this.idSach = idSach;
 	}
 
 	public String getTenSach() {

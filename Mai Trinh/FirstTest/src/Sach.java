@@ -90,41 +90,17 @@ public class Sach implements Serializable {
 	}
 
 
-	public void nhap() {
-		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Nhap ten sach: ");
-		this.tenSach= sc.nextLine();
-
-		System.out.println("Nhap tac gia cua sach: ");
-		this.tacGia = sc.nextLine();
-
-
-		System.out.println("Nhap nam xuat ban: ");
-		this.namXBan = Integer.parseInt(sc.nextLine());
-
-
-		System.out.println("Nhap nha xuat ban: ");
-		this.nhaXBan = sc.nextLine();
-
-
-		System.out.println("Nhap danh muc: ");
-		this.danhMuc = sc.nextLine();
-
-
-		System.out.println("Nhap gia ban: ");
-		this.donGia = Float.parseFloat(sc.nextLine());
-
-
-	}
 
 	public void xuat() {
-		System.out.printf("Ten sach: %2s",this.getTenSach() );
-		System.out.printf("\tTen tac gia: %2s",this.getTacGia());
-		System.out.printf("\tNam xuat ban:%4s ",this.getNamXBan());
-		System.out.printf("\tNha xuat ban: %2s",this.getNhaXBan());
-		System.out.printf("\tDanh muc: %2s",this.getDanhMuc());
-		System.out.println("\tGia ban: "+this.getDonGia());
+		//System.out.println("Ten sach\tTen tac gia\tNam xuat ban\tNha xuat ban\tDanh muc\tGia ban");
+		System.out.print("Ten sach	"+this.getTenSach() );
+		System.out.print("\tTac gia		"+this.getTacGia());
+		System.out.print("\tNam xuat ban	"+this.getNamXBan());
+		System.out.print("\tNha xuat ban	"+this.getNhaXBan());
+		System.out.print("\tDanh muc	"+this.getDanhMuc());
+		System.out.print("\tGia ban	"+this.getDonGia());
+		System.out.println();
 	}
 
 	public void nhap(ArrayList<Sach> arr) {
@@ -142,7 +118,6 @@ public class Sach implements Serializable {
 		while(true) {
 			try {
 				System.out.println("Nhap ten sach:");
-
 				this.tenSach = sc.nextLine();
 				SachException.checkTenSach (this.tenSach);break;
 			} catch (SachException e1) {
@@ -159,7 +134,6 @@ public class Sach implements Serializable {
 	void kiemtraTenTacGia() {
 		Scanner sc=new Scanner (System.in);
 		while(true) {
-
 			try {
 				System.out.println("Nhap tac gia cua sach:");
 				this.tacGia = sc.nextLine();
@@ -167,6 +141,20 @@ public class Sach implements Serializable {
 			} catch (SachException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Vui long nhap lai ten tac gia");
+			}
+		}
+	}
+	
+	void kiemtraDanhMuc() {
+		Scanner sc=new Scanner (System.in);
+		while(true) {
+			try {
+				System.out.println("Nhap danh muc cua sach:");
+				this.danhMuc = sc.nextLine();
+				SachException.checkTacGia(this.danhMuc);break;
+			} catch (SachException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Vui long nhap lai ten danh muc");
 			}
 		}
 	}
@@ -183,9 +171,12 @@ public class Sach implements Serializable {
 				// TODO Auto-generated catch block
 				System.out.println("Nam phai >0");
 			}
+			catch (NumberFormatException e1) {
+				System.out.println("Vui long nhap so");
+			}
 		}
 	}
-	
+
 	void kiemtraDonGia() {
 		Scanner sc=new Scanner (System.in);
 		while(true) {
@@ -196,7 +187,10 @@ public class Sach implements Serializable {
 				SachException.checkDonGia(this.donGia);break;
 			} catch (SachException e1) {
 				// TODO Auto-generated catch block
-				System.out.println("Nam phai >0");
+				System.out.println("Tien phai >0");
+			}
+			catch (NumberFormatException e1) {
+				System.out.println("Vui long nhap so");
 			}
 		}
 	}
@@ -210,7 +204,7 @@ public class Sach implements Serializable {
 				SachException.checkNhaXBan(this.nhaXBan);break;
 			} catch (SachException e) {
 				// TODO Auto-generated catch block
-				System.out.println("diem phai tu 0 den 10");
+				System.out.println("Vui long nhap lai ten nha xuat ban");
 			}
 		}
 	}
