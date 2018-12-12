@@ -11,7 +11,6 @@ public class Main {
 		boolean exit = false;
 		QuanLySach quanLySach = new QuanLySach();
 		
-		
 		showMenu();
 		while(true) {
 			chon = sr.nextLine();
@@ -45,13 +44,16 @@ public class Main {
 			case "5":
 				quanLySach.timKiemNXB();
 				break;
+			
 			case "6":
 				quanLySach.timKiemDM();
 				break;
+			
 			case "7":
 				System.out.println("Doanh thu ban sach :");
-				
+				quanLySach.tongDoanhThuBanSach();
 				break;
+			
 			case "0":
 				System.out.println("Thoat");
 				exit=true;

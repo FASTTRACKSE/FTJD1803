@@ -207,7 +207,7 @@ public class QuanLySach {
 		}if(sach!=null) {
 			listSach.remove(sach);
 			try {
-				sachDao.write1(listSach);
+				sachDao.write(listSach);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -215,6 +215,14 @@ public class QuanLySach {
 		}else {
 			System.out.printf("id = ",id);
 		}
+	}
+	
+	public void tongDoanhThuBanSach() {
+		float tong = 0;
+		for(int i = 0 ; i < listSach.size();i++) {
+			tong = (float) (tong+listSach.get(i).getDonGia());
+		}
+		System.out.println(""+tong);
 	}
 
 }
