@@ -31,7 +31,7 @@ public class SinhVien1 {
 	public void xuat() {
 		System.out.println("ho ten:"+this.hoTen);
 		System.out.println("diem:"+this.diem);
-		System.out.println("ngay thang nam:"+this.ngay);
+		System.out.printf("%s %tB %<te, %<tY","Date la:",this.ngay);
 	}
 	void checkDiem() {
 		while(true) {

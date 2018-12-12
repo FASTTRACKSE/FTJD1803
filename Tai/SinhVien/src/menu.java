@@ -19,17 +19,17 @@ public class menu {
 		for (SinhVien1 sv : sv1) {
 			sv.xuat();
 		}
-		Collections.sort(sv1, new Comparator<SinhVien1>() {
-
-			@Override
-			public int compare(SinhVien1 st1, SinhVien1 st2) {
+		for (int i = 0; i < sv1.size(); i++) {
+			
+		
+		Collections.sort(sv1,new Comparator<SinhVien1>() {
+			public int compare(SinhVien1 s1, SinhVien1 s2) {
 				// TODO Auto-generated method stub
-				if((st1.getHoTen().compareTo(st2.getHoTen()))>0)
-				return 1;
-				else return 0;
-			}	
+				return s1.getHoTen().compareTo(s2.getHoTen());
+			}
+			
 		});
-		System.out.println("da sap xep");
+		}
 		for (SinhVien1 sv : sv1) {
 			sv.xuat();
 		}
