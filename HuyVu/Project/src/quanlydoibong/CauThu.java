@@ -139,7 +139,7 @@ public class CauThu extends Nguoi{
 	}
 	
 	public void xuat() {
-		System.out.println("Ho va ten :"+this.getHoTen()+"Que Quan :"+this.getQueQuan()+"Tuoi :"+this.getTuoi()+"Cau Lac Bo"+this.getCauLacBo()+"Vi tri choi bong :"+this.getViTriChoiBong());
+		System.out.println(" Ho va ten : " + this.getHoTen() + " Que Quan : " + this.getQueQuan() + " Tuoi :" + this.getTuoi() + " Cau Lac Bo :" + this.getCauLacBo() + " Vi tri choi bong : "+ this.getViTriChoiBong());
 	}
 	
 }
