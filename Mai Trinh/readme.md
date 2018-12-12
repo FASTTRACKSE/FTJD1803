@@ -14,4 +14,4 @@ Phan 1:
 11. Lab 5: <a href = https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Lab5/src> lab5 </a>
 12. Luu du lieu: <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/Assignment7"> Assignment7 </a>
 13. Test thu: <a href ="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/FirstTest/src"> Test</a>
-14. Final Assignment: <a href=""> Assignment </a>
+14. Final Assignment: <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/FinalAssignment/src"> Assignment </a>
