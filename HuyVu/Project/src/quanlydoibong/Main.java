@@ -74,12 +74,15 @@ public class Main {
 					}
 				});
 				System.out.println("Sap xep cau thu theo ten :");
-				for(int i=0;i<arrayList.size();i++) {
-					System.out.println("Ho va ten : " +arrayList.get(i).getHoTen());
+				for(Nguoi ng : arrayList) {
+					if(ng instanceof CauThu) {
+						CauThu ct = (CauThu)ng;
+					System.out.println("Ho va ten : " +ng.getHoTen());
 				}
+					}
 			}
 			else if(chon==6) {
-				for(int i = 0 ; i < n ; i++) {
+				for(Nguoi ng : arrayList) {
 					luong = nguoi.tinhLuong();
 					tongLuong +=luong;
 				}
