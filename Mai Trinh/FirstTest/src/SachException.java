@@ -26,7 +26,6 @@ public class SachException extends Exception {
 		}
 	}
 	
-	
 	static void checkDanhMuc(String danhMuc)throws SachException{
 		if(danhMuc.isEmpty()) {
 			 throw new SachException("Yeu cau nhap lai!");
