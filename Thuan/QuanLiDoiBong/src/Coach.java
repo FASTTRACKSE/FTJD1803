@@ -51,6 +51,6 @@ public class Coach extends Person{
 				System.out.println(this.hoTen +"||"+ this.cauLB +"||"+ this.tuoi +"||" +this.luong+"|"+ this.phuCap);
 			}
 			public double tinhLuong() {
-				return this.getLuong() * 10 + this.getPhuCap() * 20;
+				return this.getPhuCap() * 0.2;
 			}
 }
