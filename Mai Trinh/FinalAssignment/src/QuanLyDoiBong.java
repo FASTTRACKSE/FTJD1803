@@ -16,7 +16,7 @@ public class QuanLyDoiBong {
 4. Hiển thị danh sách cầu thủ và huấn luyện viên của một câu lạc bộ được nhập vào từ bàn phím
 5. Sắp xếp cầu thủ theo tên.
 6. Tính tổng lương và phụ cấp một câu lạc bộ (được nhập từ bàn phím) phải trả
-7. Tìm câu lạc bộ chi ngân sách cho cầu thủ và huấn luyện viên nhiều nhất
+7. Tìm câu lạc bộ chi ngân sách cho cầu thủ và huấn luyện viên nhiều nhất. Nhập và xuất file
 		 */
 		/*
 		 * for (Person ps : listPerson) { 
@@ -29,7 +29,6 @@ Player pl = (Plyer) ps;
 		 */
 
 		ArrayList <Person> PersonList = new ArrayList<>();
-
 
 		Scanner sc = new Scanner(System.in);
 
@@ -92,19 +91,19 @@ Player pl = (Plyer) ps;
 				break;
 
 			case 4: 
-				ArrayList <Person> CLBList = new ArrayList<>();
+
 				System.out.println("------------------------");
 				System.out.println("Moi ban nhap ten cau lac bo:  ");
 				String nhap;
 				nhap=sc.nextLine();
 				System.out.println("----Hien thi danh sach cac cau thu va huan luyen vien cung mot cau lac bo-----");
-				
+
 				for(int i=0; i<PersonList.size(); i++) {
 					if (nhap.equals(PersonList.get(i).getCauLacBo())) {
-						System.out.println(i+". "+PersonList.get(i).getHoTen());
+						System.out.println(PersonList.get(i).toString());
 					}
 				}
-				
+
 				break;
 
 			case 5: 
@@ -117,16 +116,42 @@ Player pl = (Plyer) ps;
 						return (p1.getHoTen().compareTo(p2.getHoTen()));
 					}
 				});
-
+				for (int i=0; i <PersonList.size(); i++) {
+					System.out.println(PersonList.get(i).toString());
+				}
 				break;
 
 			case 6: 
 				System.out.println("--------------------------");
-				System.out.println("-----Tong luong va phu cap phai tra cua mot cau lac bo-----");
+				System.out.println("Moi ban nhap ten cau lac bo:  ");
+				String nhap1;
+				nhap1=sc.nextLine();
+
+				float sum=0;
+
+				for (Person ps : PersonList) { 
+
+					if ((ps instanceof Coach)) {
+						Coach ch = (Coach)ps;
+						if (ch.getCauLacBo().equals(nhap1)){
+							sum=sum+ch.getPhuCap()+ps.getLuong();
+						}
+					}
+					else if (ps instanceof Player)	{
+						Player pl = (Player) ps; 
+						if (pl.getCauLacBo().equals(nhap1) )
+						{
+							sum=sum+pl.getThuong()+ps.getLuong();
+						}
+					}
+				}
+
+				System.out.println("------Tong ngan sach phai tra cua cau lac bo nay:  "+sum);
 
 				break;
 
 			case 7: 
+
 				System.out.println("--------------------------");
 				System.out.println("-----Tim cau lac bo chi ngan sach nhieu nhat-----");
 

@@ -44,10 +44,16 @@ public class Player extends Person {
 	
 
 
-	public double getThuong() {
+	public float getThuong() {
 		
-		return (0.1 * getLuong());
+		return (float) (0.1 * getLuong());
 	}
+	
+
+	public float tinhThuNhap() {
+		return getLuong()+getThuong();
+	}
+	
 	Scanner sc = new Scanner(System.in);
 	public void nhap(ArrayList<Person> arr) {
 		super.nhap(arr);
@@ -63,6 +69,6 @@ public class Player extends Person {
 	
 	
 	public String toString() {
-		return "Cau thu: "+super.toString()+"\tQue quan: "+queQuan+"\tVi tri: "+viTri+"\tThuong: "+getThuong();
+		return "Cau thu: "+super.toString()+"\tQue quan: "+queQuan+"\tVi tri: "+viTri+"\tThuong: "+getThuong()+"\tThu nhap: "+tinhThuNhap();
 	}
 }

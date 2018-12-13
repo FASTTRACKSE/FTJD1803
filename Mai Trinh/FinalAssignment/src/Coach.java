@@ -36,7 +36,7 @@ public class Coach extends Person {
 
 	
 
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);		
 		public void nhap(ArrayList<Person> arr) {
 			super.nhap(arr);
 			System.out.println("Nhap quoc tich: ");
@@ -46,13 +46,17 @@ public class Coach extends Person {
 		}
 
 		
-		public double getPhuCap() {
+		public float getPhuCap() {
 	
-			return  (0.2 * getLuong());
+			return  (float) (0.2 * getLuong());
 		}
 
+		public float tinhThuNhap() {
+			return getLuong()+getPhuCap();
+		}
+		
 		public String toString() {
-			return "HLV: "+super.toString()+"\tQuoc tich: "+quocTich+"\tPhu cap: "+getPhuCap();
+			return "HLV: "+super.toString()+"\tQuoc tich: "+quocTich+"\tPhu cap: "+getPhuCap()+"\tThu nhap: "+tinhThuNhap();
 		}
 		
 }
