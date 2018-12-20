@@ -12,20 +12,13 @@
    Bài tập về nhà:
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/mang.java"> link</a><br>
    Hướng đối tương p1:
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/QLSV.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV/src/SinhVien.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV/src"> link</a><br>
    Bài tập về nhà 2:
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/Lad03/src/Lad03.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/Lad03/src/sanpham.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Lad03/src"> link</a><br>
    SETER,GETER:
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/menu1.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/SinhVien.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/Main.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV1/src"> link</a><br>
    Bài tập về nhà 3:
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/menu1.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/SinhVienException.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/SinhVien.java"> link</a><br>
-   <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/QLSV1/src/Main.java"> link</a><br>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV1/src"> link</a><br>
   Assignment 7:
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/QLSV1/src"> link</a><br>
   Thi thử:
@@ -33,5 +26,4 @@
   Thi:
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Thi"> link</a><br>
 
-</table>
   
