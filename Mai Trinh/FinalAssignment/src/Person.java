@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Person {
+public abstract class Person {
 	/*
 	 * Viết chương trình xây dựng hệ thống quản lý đội bóng gồm cầu thủ và huấn luyện viên
 Cầu thủ (Player) có những thông tin như: 		họ tên, quê quán, câu lạc bộ, tuổi, vị trí chơi bóng, lương, thưởng. 
@@ -80,7 +80,8 @@ Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Pl
 	public void setLuong(float luong) {
 		this.luong = luong;
 	}
-
+	
+	abstract public float tinhThuNhap();
 
 	public void nhap(ArrayList<Person> arr) {
 		

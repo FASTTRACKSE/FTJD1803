@@ -109,6 +109,14 @@
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Shop"> link</a>
   </td>
  </tr>
+ <tr>
+     <td>
+  Thi
+   </td>
+  <td rowpan=2>
+   <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Thi"> link</a>
+  </td>
+ </tr>
 
 </table>
   

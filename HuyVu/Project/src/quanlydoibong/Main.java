@@ -1,5 +1,6 @@
 package quanlydoibong;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -16,6 +17,7 @@ public class Main {
 		System.out.println("Nhap so nguoi ban can nhap :");
 		int n = scanner.nextInt();
 		ArrayList<Nguoi> arrayList = new ArrayList<>();
+		ArrayList<CauLacBoMax> listClubs = new ArrayList<CauLacBoMax>();
 
 		Nguoi nguoi = null;
 
@@ -90,12 +92,39 @@ public class Main {
 
 			}else if (chon==7) {
 
+				for (Nguoi ps : arrayList) {
+					String clb = ps.getCauLacBo();
+
+					boolean chk = false;
+
+					for (CauLacBoMax cb : listClubs) {
+						if (clb.equals(cb.getTenCauLacBo())) {
+							chk = true;
+							cb.tongNgansach +=ps.tinhLuong();
+							break;
+						}
+					}
+
+					if (!chk) {
+						listClubs.add(new CauLacBoMax(ps.tinhLuong(),clb));
+					}
+				}
+
+				float max = 0;
+				for (CauLacBoMax cb : listClubs) {
+					if(cb.tongNgansach > max) {
+						max = (float) cb.tongNgansach;
+					}
+				}
+				System.out.println("Ngan sach lon nhat "+max);
+
 			}else if(chon==0) {
 				System.exit(chon);
 			}
 		}
 
 	}
+
 
 	public static void menu() {
 		System.out.println(">>       Chon Menu      <<");
