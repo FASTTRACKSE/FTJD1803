@@ -50,12 +50,11 @@ public class User {
 	
 	Scanner sc= new Scanner(System.in);
 	public void nhap() {
-		System.out.println("Vui long nhap ten tai khoan: ");
+		System.out.print("Vui long nhap ten tai khoan: ");
 		this.username=sc.nextLine();
-		System.out.println("Vui long nhap password: ");
+		System.out.print("Vui long nhap password: ");
 		this.password= sc.nextLine();
-//		System.out.println("Nhap chuc vu: ");
-//		this.chucnang = sc.nextLine();
+
 	}
 	
 	

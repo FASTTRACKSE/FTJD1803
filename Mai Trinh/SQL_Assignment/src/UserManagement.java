@@ -18,10 +18,10 @@ public class UserManagement {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		Scanner sc = new Scanner(System.in);
 		User user = new User();
-		
+
 		SinhVien sv = new SinhVien();
 		user.nhap();
 		try {
@@ -38,55 +38,9 @@ public class UserManagement {
 			} else if (chucnang.equals("Can bo")) {
 				System.out.println( "Xin chao can bo: "+user.getUsername());
 				System.out.println("-----QUAN LI SINH VIEN-----");
-				int a=0;
-				boolean exit = false;
-				while(true) {
-					System.out.println("1. Xem danh sach sinh vien");
-					System.out.println("2. Them moi sinh vien");
-					System.out.println("3. Sua thong tin sinh vien");
-					System.out.println("4. Xoa sinh vien");
-					System.out.println("5. Dang xuat");
-					System.out.print("Xin vui long chon phim chuc nang: ");
-					a= Integer.parseInt(sc.nextLine());
-					switch (a) {
-
-					case 1:						
-						sv.xuat();						
-						break;
-
-					case 2:
-
-
-						break;
-
-					case 3:
-
-						String qr = "insert into sv values(\""+ sv.getMaSV() +"\",\""+ sv.getTenSV() +"\", \""+ sv.getIDlop() +"\" )"; 
-						stmt.executeUpdate(qr); 
-						break;
-
-					case 4: 
-
-
-						break;
-
-					case 5:
-						System.out.println("Dang xuat");
-						exit = true;
-						break;
-
-					default:
-						System.out.println("invalid! please choose action in below menu:");
-						break;
-					}
-
-					if (exit) {
-						break;
-					}
-
-				}
-			}else {
-				System.out.println("Ko phai doi tuong quan ly");
+				sv.menu();
+			} else {
+				System.out.println("Khong phai doi tuong quan ly");
 
 			}
 
@@ -94,8 +48,8 @@ public class UserManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-
 	}
 }
+
 
 
