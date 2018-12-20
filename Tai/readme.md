@@ -27,5 +27,7 @@
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Thi"> link</a><br>
    <hr>
    <b>Truy vấn My SQL</b> 
+   Bài tập về nhà My SQL:
+   <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/THPTHoaVang/src">link</a><br>
 
   
