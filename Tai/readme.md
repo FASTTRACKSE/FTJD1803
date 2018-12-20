@@ -1,4 +1,4 @@
-<b>Bài tập</b> 
+<b>Bài tập hướng đối tượng</b> 
    Bài tập cộng trừ nhân chia:
    <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/HelloJava/src/HelloJava.java"> link</a><br>
    Phuong trình bậc nhất:
@@ -25,5 +25,7 @@
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Shop"> link</a><br>
   Thi:
    <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/Thi"> link</a><br>
+   <hr>
+   <b>Truy vấn My SQL</b> 
 
   
