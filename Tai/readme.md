@@ -29,5 +29,8 @@
    <b>Truy vấn My SQL</b> 
    Bài tập về nhà My SQL:
    <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/THPTHoaVang/src">link</a><br>
+   <hr>
+   <b>Java Swing</b> 
+   <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/GiaoDien/src/MyWindow.java">link</a><br>
 
   
