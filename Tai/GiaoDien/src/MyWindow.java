@@ -143,7 +143,6 @@ import javax.xml.ws.handler.MessageContext;
 								stmt.executeUpdate(xoa);
 								JOptionPane.showMessageDialog(null, "Xóa thành công!");
 								}
-							
 					
 							} catch (Exception e3) {
 								System.out.println(e3);
@@ -158,7 +157,7 @@ import javax.xml.ws.handler.MessageContext;
 						@Override
 						public void actionPerformed(ActionEvent e) {
 							try {
-								setDefaultCloseOperation(EXIT_ON_CLOSE);
+								System.exit(0);
 							} catch (Exception e4) {
 								System.out.println(e4);
 							}
