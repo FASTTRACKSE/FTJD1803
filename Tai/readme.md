@@ -31,7 +31,7 @@
    <a href = "https://github.com/FASTTRACKSE/FTJD1803/tree/master/Tai/THPTHoaVang/src">link</a><br>
    <hr>
    <b>Java Swing</b><br> 
-   Bài tàm trên lớp
+   Bài làm trên lớp
    <a href = "https://github.com/FASTTRACKSE/FTJD1803/blob/master/Tai/GiaoDien/src/MyWindow.java">link</a><br>
 
   
