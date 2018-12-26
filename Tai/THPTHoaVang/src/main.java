@@ -20,7 +20,7 @@ public class main {
 	}
 
 	public static void main(String[] args) {
-		
+		Scanner sc = new Scanner (System.in);
 		User us = new User();
 		us.nhap();
 		try {
@@ -39,8 +39,8 @@ public class main {
 							+ "2.them moi sinh vien\n"
 							+ "3.sua sinh vien \n"
 							+ "4. xoa sinh vien \n");
-					Scanner sc = new Scanner (System.in);
 					System.out.println("nhap lua chon:");
+					
 					a = sc.nextInt();
 					switch(a) {
 					case 1:{  rs = stmt.executeQuery("select * from students");
@@ -58,21 +58,28 @@ public class main {
 					}
 						break;
 					case 3:{
+						
+					
 						String hoTen;
+						Scanner sc1 = new Scanner (System.in);
 						System.out.println("nhap mssv can sua:");
-						hoTen = sc.nextLine();
+						hoTen = sc1.nextLine();
+						rs = stmt.executeQuery("select * from students");
+//						rs.first();
+						while(rs.next()) {
 						if(hoTen.equals(rs.getString(1))) {
 							SinhVien sv = new SinhVien();
 							sv.nhap();
-							stmt.executeUpdate("UPDATE `students` SET (\""+ sv.getMaSV() +"\",\""+ sv.getHoTenSV() +"\", \""+ sv.getMaSV() +"\" )");
+							stmt.executeUpdate("UPDATE students SET (\""+ sv.getMaSV() +"\",\""+ sv.getHoTenSV() +"\", \""+ sv.getMaSV() +"\" )");
 						}
-					}
+					}}
 					case 4:{
 						String mssv;
 						System.out.println("nhap mssv can xoa:");
 						mssv =sc.nextLine();
-						stmt.executeUpdate("DELETE FROM `students` WHERE 'maSV'="+mssv);
-					}
+						String qr = ("DELETE FROM students WHERE maSV="+mssv);
+						stmt.executeQuery(qr);
+					}break;
 					}
 				
 				}
