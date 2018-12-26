@@ -114,6 +114,7 @@ import javax.xml.ws.handler.MessageContext;
 						}
 					});
 				 
+				 
 				 jbtluu.addActionListener(new ActionListener() {
 						
 						@Override
@@ -121,6 +122,7 @@ import javax.xml.ws.handler.MessageContext;
 							try {
 								String nhap = "INSERT INTO students(maSV, hoTenSV,idLop,Tuoi) VALUES ('"+jtfMSV.getText()+"','"+jtfName.getText()+"','',"+Integer.parseInt(jtfTuoi.getText())+")";
 								stmt.executeUpdate(nhap);
+								JOptionPane.showMessageDialog(null, "Thêm thành công!");
 							} catch (Exception e2) {
 								System.out.println(e2);
 							}
@@ -128,16 +130,37 @@ import javax.xml.ws.handler.MessageContext;
 						}
 					});
 				 
+				 
 				 jbtxoa.addActionListener(new ActionListener() {
 						
 						@Override
 						public void actionPerformed(ActionEvent e) {
 							try {
+								if(jtfMSV.getText().equals("")) {
+									JOptionPane.showMessageDialog(null, "Rỗng!");
+								}else {
 								String xoa = "DELETE FROM students WHERE maSV=\""+jtfMSV.getText()+"\"";
 								stmt.executeUpdate(xoa);
-								JOptionPane.showMessageDialog(null, "Xoa thanh cong!");
+								JOptionPane.showMessageDialog(null, "Xóa thành công!");
+								}
+							
+					
 							} catch (Exception e3) {
 								System.out.println(e3);
+							}
+							
+						}
+					});
+				 
+				 
+				 jbtthoat.addActionListener(new ActionListener() {
+						
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							try {
+								setDefaultCloseOperation(EXIT_ON_CLOSE);
+							} catch (Exception e4) {
+								System.out.println(e4);
 							}
 							
 						}
@@ -147,6 +170,7 @@ import javax.xml.ws.handler.MessageContext;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		 
 		 
 		 
 
