@@ -1,4 +1,4 @@
-<h1>**************************** Java Core *****************************************</h1></br>
+<h1>********************** Java Core ***************************</h1></br>
 
 <h2> ****** Session 1 ******** </h2></br>
 Bai tap 1 : Phuong trinh bac 1 : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/introduction/PTB1.java">Phuong trinh bac 1</a></br>
@@ -36,7 +36,7 @@ Bai Quan ly sach : Quan ly sach <a href="https://github.com/FASTTRACKSE/FTJD1803
 -------------------------------------------------- Finish ---------------------------------------------------------------</br>
 Bai thi project : Bai project quan ly cau lac bo <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/Project/src/quanlydoibong">Project<a>
   
-<h1> ***************************************** Java Swing Desktop ***************************************************</h1></br>
+<h1> ************* Java Swing Desktop ***************</h1></br>
 
 --------------- Bai 1 ---------------</br>
 Bai 1 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/QuanLySinhVienSwing/src/fasttrackse/vn/edu">Bai 1</a></br>
