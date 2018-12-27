@@ -1,4 +1,4 @@
-<h1>*********************************************** Java Core ********************************************************</h1></br>
+<h1>**************************** Java Core *****************************************</h1></br>
 
 <h2> ****** Session 1 ******** </h2></br>
 Bai tap 1 : Phuong trinh bac 1 : <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/HuyVu/Session1/src/introduction/PTB1.java">Phuong trinh bac 1</a></br>
