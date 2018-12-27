@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.ListIterator;
 import java.util.Properties;
 import java.util.Vector;
 
@@ -52,7 +53,7 @@ public class QuanLySachUI extends JFrame{
 	JButton btnTimKiem;
 
 	ArrayList<NhaXuatBan> dsNxb = null;
-	
+	ListIterator<NhaXuatBan> nxbIterator;
 	
 	public QuanLySachUI(String title) {
 		super(title);
@@ -125,6 +126,42 @@ public class QuanLySachUI extends JFrame{
 				xuLyXoaNxb();
 				hienThiToanBoDanhSachNhaXuatBan();
 				tblNxb.updateUI();
+			}
+		});
+		
+		btnVeTruoc.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				dsNxb =new ArrayList<NhaXuatBan>();
+				nxbIterator = dsNxb.listIterator();
+				if(nxbIterator.hasPrevious()) {
+					nxbIterator.previous();
+					txtMaNxb.setText(nxbIterator.previous().getMaNhaXuatBan());
+					txtTenNxb.setText(nxbIterator.previous().getTenNhaXuatBan());
+					txtDiaChi.setText(nxbIterator.previous().getDiaChi());
+					txtSoDienThoai.setText(nxbIterator.previous().getSoPhone());
+				}
+				
+			}
+		});
+		
+		btnVeSau.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				dsNxb =new ArrayList<NhaXuatBan>();
+				nxbIterator = dsNxb.listIterator();
+				if(nxbIterator.hasNext()) {
+					nxbIterator.next();
+					txtMaNxb.setText(nxbIterator.next().getMaNhaXuatBan());
+					txtTenNxb.setText(nxbIterator.next().getTenNhaXuatBan());
+					txtDiaChi.setText(nxbIterator.next().getDiaChi());
+					txtSoDienThoai.setText(nxbIterator.next().getSoPhone());
+				}
+				
 			}
 		});
 		
