@@ -22,4 +22,11 @@
   <ol>
 <li> SQL Assignment: <a href ="https://github.com/FASTTRACKSE/FTJD1803/tree/master/Mai%20Trinh/SQL_Assignment/src"> SQL </a> </li>
   </ol>
+  
+  </ol>
+  <h2> Java Desktop </h2>
+  <ol>
+<li> Ex1: <a href => Link </a> </li>
+  </ol>
+  
 </main>
