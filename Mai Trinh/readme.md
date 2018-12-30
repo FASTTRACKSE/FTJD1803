@@ -26,7 +26,7 @@
   </ol>
   <h2> Java Desktop </h2>
   <ol>
-  <li> Mywindow: <a href=""> Link</a></li>
+  <li> Mywindow: <a href="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/javaswing/src/javaswing/MyWindow.java"> Link</a></li>
 <li> Ex1: <a href ="https://github.com/FASTTRACKSE/FTJD1803/blob/master/Mai%20Trinh/javaswing/src/javaswing/Ex1.java"> Link </a> </li>
   </ol>
   
