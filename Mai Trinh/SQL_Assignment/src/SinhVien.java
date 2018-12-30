@@ -61,7 +61,7 @@ public class SinhVien {
 	}
 
 
-	public void xuat() {
+	public void hienthithongtin() {
 		System.out.println("-----DANH SACH SINH VIEN-----");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -81,8 +81,10 @@ public class SinhVien {
 		String maSV = sc.nextLine();
 		System.out.println("Nhap ten sinh vien can them: ");
 		String ten = sc.nextLine();
+		ten=SinhVien.ChuanHoaChuoi(ten);
 		System.out.println("Nhap ID lop: ");
 		String id = sc.nextLine();
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlihocsinh",  "root","");
@@ -93,6 +95,12 @@ public class SinhVien {
 		} catch (Exception e ) {
 			System.out.println(e);
 		}
+		/*
+		 *  } catch (ClassNotFoundException e){
+		 *  System.out.printl("Load driver khong thanh cong");
+		 *  } catch (SQLException e){
+		 *   System.out.printl("Loi: "+e.getMessage());
+		 */
 
 	}
 
@@ -103,6 +111,7 @@ public class SinhVien {
 		String ten = sc.nextLine();
 		System.out.print("Nhap ID lop cap nhat: ");
 		String id = sc.nextLine();
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlihocsinh",  "root","");
@@ -125,13 +134,36 @@ public class SinhVien {
 			String qr = "delete from students WHERE Ma_SV = ?" ; 
 			PreparedStatement preparestmt = con.prepareStatement(qr);
 			preparestmt.setString(1, maxoa);
-			preparestmt.executeUpdate(); 			
+			int kt = preparestmt.executeUpdate();
+			if (kt!=0) {
+				System.out.println("Xoa thanh cong");
+			}
 			con.close();
 		} catch (Exception e ) {
 			System.out.println(e);
 		}
 
 	}
+	
+	public static String ChuanHoaChuoi (String chuoichuan) {
+		// tach tu su dung split
+		String []str = chuoichuan.split("\\s+");
+		//regex: ki tu dac biet
+		// \\s+: nhieu dau cách
+		String chuoisauchuan= "";
+		for (int i=0; i<=str.length; i++)
+		{
+		
+			chuoisauchuan+= String.valueOf(str[i].charAt(0)).toUpperCase()+str[i].substring(1).toLowerCase();
+			if (i<str.length) {
+				chuoisauchuan+= " ";
+			}
+			
+		}
+		return chuoisauchuan;
+	}
+	
+	
 	public void menu() {
 		int a=0;
 		boolean exit = false;
@@ -147,7 +179,7 @@ public class SinhVien {
 			switch (a) {
 
 			case 1:						
-				xuat();						
+				hienthithongtin();						
 				break;
 
 			case 2:

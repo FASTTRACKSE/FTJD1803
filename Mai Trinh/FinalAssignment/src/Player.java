@@ -39,11 +39,6 @@ public class Player extends Person {
 		this.viTri = viTri;
 	}
 	
-	
-	
-	
-
-
 	public float getThuong() {
 		
 		return (float) (0.1 * getLuong());

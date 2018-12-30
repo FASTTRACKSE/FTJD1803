@@ -1,5 +1,4 @@
-
-
+package javaswing;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -8,76 +7,44 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 
-
-public class MyConnection extends JFrame {
-//	Statement stmt = null;
-//	ResultSet rs= null;
-	private PreparedStatement stmt;
-	private ResultSet rs;
-	private Connection conn;
-	public JTable table;
-	public void queryUpdate(String sql,String message){
-		  try {
-		   stmt = conn.prepareStatement(sql);
-		   if(stmt.executeUpdate()==1){
-		    DefaultTableModel model = (DefaultTableModel)table.getModel();
-		    model.setRowCount(0);
-		    showTable();
-		    JOptionPane.showMessageDialog(null, message + " Successfully!");
-		   }
-		  } catch (SQLException se) {
-		   se.printStackTrace();
-		  }
-		 }
-	 public void showTable(){
-		  ArrayList <SinhVien> list = getArrayList();
-		  DefaultTableModel model = (DefaultTableModel)table.getModel();
-		  Object[] cols = new Object[4];
-		  for (int i = 0; i < list.size(); i++) {
-		   cols[0] = list.get(i).getIDlop() ;
-		   cols[1] = list.get(i).getTenSV();
-		  
-		   model.addRow(cols);
-		  }
-		 }
-		 
-	private ArrayList<SinhVien> getArrayList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public MyConnection() {
-		super ("Quản lý sinh viên- Oracle");
+public class Ex1 extends JFrame {
+	Statement stmt = null;
+	ResultSet rs= null;
+	
+	public Ex1() {
+		super ("Quản lý sinh viên- Oracle");		
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 
 		JPanel pnBorder=new JPanel();
 		pnBorder.setLayout(new BorderLayout());
+		
 		//pnBorder để tạo vùng biên
 		JPanel pnNorth=new JPanel(); 
 		JLabel jlbName0 = new JLabel("Chương trình quản lý sinh viên");
 		pnBorder.add(pnNorth,BorderLayout.NORTH);
 		pnNorth.add(jlbName0);
+		
+		
 		JPanel pnCenter=new JPanel();		
 		pnCenter.setLayout(new GridLayout(3,2));
 		pnBorder.add(pnCenter,BorderLayout.CENTER);
-
-
-
+		
 		JLabel jlbName1 = new JLabel("Mã sinh viên: ");
 		pnCenter.add(jlbName1);
 		JTextField jtxtMaSV = new JTextField(10);
 		pnCenter.add(jtxtMaSV);
+		
+		
 		JLabel jlbName2 = new JLabel("Tên sinh viên: ");
 		pnCenter.add(jlbName2);		
 		JTextField jtxtTenSV = new JTextField(10);
 		pnCenter.add(jtxtTenSV);
+		
+		
 		JLabel jlbName3 = new JLabel("Lớp: ");
 		pnCenter.add(jlbName3);
 		JTextField jtxtLop = new JTextField(10);
@@ -87,7 +54,7 @@ public class MyConnection extends JFrame {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlihocsinh","root","");
-			//stmt = con.createStatement();
+			stmt = con.createStatement();
 			rs = stmt.executeQuery("select * from students");
 
 		}catch (Exception ex) {
@@ -154,8 +121,8 @@ public class MyConnection extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					//String strMaSV= jtxtMaSV.getText();
-					String sqlDelete ="delete from students where MaSV = '"+jtxtMaSV.getText()+"'";			
-					queryUpdate(sqlDelete, "Xóa");
+					//String sqlDelete ="delete from students where Ma_SV = '2'";			
+					String sqlDelete ="delete from students where Ma_SV = "+jtxtMaSV.getText();	
 					stmt.executeUpdate(sqlDelete);
 					rs = stmt.executeQuery("select * from students");
 
@@ -169,18 +136,16 @@ public class MyConnection extends JFrame {
 		pnSouth.add(btn5);
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				System.exit(0);
 
 			}});
-
-
 
 		pnBorder.add(pnSouth,BorderLayout.SOUTH); 
 		getContentPane().add(pnBorder); 
 	}
 
 	public static void main(String[] args) { 
-		MyConnection ui=new MyConnection();  
+		Ex1 ui=new Ex1();  
 
 		ui.setSize(600, 400);  		
 		ui.setLocationRelativeTo(null);  // set vị trí chạy ra giữa màn hình
