@@ -6,6 +6,7 @@ import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Label;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -14,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.ListIterator;
 import java.util.Properties;
 import java.util.Vector;
 
@@ -42,7 +44,8 @@ public class QuanLySachUI extends JFrame{
 
 	JTextField txtMaNxb,txtTenNxb,txtDiaChi,txtSoDienThoai;
 	JButton btnVeTruoc,btnVeSau;
-	JLabel lblStep;
+	JLabel lblTrang;
+	JLabel lblSoTrang;
 
 	JButton btnThem,btnLuu,btnSua,btnXoa;
 
@@ -52,16 +55,20 @@ public class QuanLySachUI extends JFrame{
 	JButton btnTimKiem;
 
 	ArrayList<NhaXuatBan> dsNxb = null;
+
+	int postion = 0;
+	long soTrang, trang = 1;
 	
-	
+
 	public QuanLySachUI(String title) {
+
 		super(title);
 		addControls();
 		addEvents();
 
 		hienThiToanBoDanhSachNhaXuatBan();
 	}
-	
+
 
 	private void hienThiToanBoDanhSachNhaXuatBan() {
 		// TODO Auto-generated method stub
@@ -104,56 +111,91 @@ public class QuanLySachUI extends JFrame{
 				tblNxb.updateUI();
 			}
 		});
-		
+
 		btnSua.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				xuLyCapNhatNxb();
 				hienThiToanBoDanhSachNhaXuatBan();
 				tblNxb.updateUI();
-				
+
 			}
 		});
-		
+
 		btnXoa.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				xuLyXoaNxb();
 				hienThiToanBoDanhSachNhaXuatBan();
 				tblNxb.updateUI();
 			}
 		});
-		
+
+
+
+		btnVeSau.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if ( postion+1 < dsNxb.size() ) {
+					txtMaNxb.setText(dsNxb.get(postion+1).getMaNhaXuatBan());
+					txtTenNxb.setText(dsNxb.get(postion+1).getTenNhaXuatBan());
+					txtDiaChi.setText(dsNxb.get(postion+1).getDiaChi());
+					txtSoDienThoai.setText(dsNxb.get(postion+1).getSoPhone());
+					postion++;
+					
+				}
+
+			}
+		});
+
+		btnVeTruoc.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if(postion-1>=0) {
+					txtMaNxb.setText(dsNxb.get(postion-1).getMaNhaXuatBan());
+					txtTenNxb.setText(dsNxb.get(postion-1).getTenNhaXuatBan());
+					txtDiaChi.setText(dsNxb.get(postion-1).getDiaChi());
+					txtSoDienThoai.setText(dsNxb.get(postion-1).getSoPhone());
+					postion--;
+				}
+
+			}
+		});
+
 		tblNxb.addMouseListener(new MouseListener() {
-			
+
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void mousePressed(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
@@ -171,11 +213,12 @@ public class QuanLySachUI extends JFrame{
 				txtSoDienThoai.setText(sp);
 				NhaXuatBanService nhaXuatBanService = new NhaXuatBanService();
 				nhaXuatBanService.hienThiChiTiet(ma,nxb);
-				
+
 			}
 		});
 
 	}
+
 	protected void xuLyXoaNxb() {
 		// TODO Auto-generated method stub
 		try {
@@ -189,7 +232,7 @@ public class QuanLySachUI extends JFrame{
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 
@@ -230,10 +273,10 @@ public class QuanLySachUI extends JFrame{
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 	}
 
-	
+
 
 	private void addControls() {
 		// TODO Auto-generated method stub
@@ -295,10 +338,12 @@ public class QuanLySachUI extends JFrame{
 
 		JPanel pnButtonChiThiet = new JPanel();
 		btnVeTruoc = new JButton("Ve truoc");
-		lblStep = new JLabel("1/10");
+		lblTrang = new JLabel("");
+		lblSoTrang = new JLabel("");
 		btnVeSau = new JButton("Ve sau");
 		pnButtonChiThiet.add(btnVeTruoc);
-		pnButtonChiThiet.add(lblStep);
+		pnButtonChiThiet.add(lblTrang);
+		pnButtonChiThiet.add(lblSoTrang);
 		pnButtonChiThiet.add(btnVeSau);
 		pnChiTiet.add(pnButtonChiThiet);
 

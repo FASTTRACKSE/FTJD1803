@@ -20,13 +20,13 @@ Xây dựng chương trình có các chức năng:
 
 Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Player và lớp Coach kế thừa từ lớp này.
 	 */
-	
+
 	String hoTen;
 	int tuoi;
 	String cauLacBo;
 	float luong;
-	
-	
+
+
 	public Person() {
 		super();
 	}
@@ -37,7 +37,7 @@ Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Pl
 		this.hoTen = hoTen;
 		this.tuoi = tuoi;
 		this.cauLacBo = cauLacBo;
-		
+
 	}
 
 
@@ -70,8 +70,8 @@ Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Pl
 		this.cauLacBo = cauLacBo;
 	}
 
-	
-		
+
+
 	public float getLuong() {
 		return luong;
 	}
@@ -80,26 +80,26 @@ Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Pl
 	public void setLuong(float luong) {
 		this.luong = luong;
 	}
-	
+
 	abstract public float tinhThuNhap();
 
 	public void nhap(ArrayList<Person> arr) {
-		
-	Scanner sc= new Scanner(System.in);
-	
-	
-	System.out.println("Nhap ho ten: ");
-	hoTen= sc.nextLine();
-	
-	kiemTraTuoi(arr);
-	
-	System.out.println("Nhap cau lac bo: ");
-	cauLacBo=sc.nextLine();
-	
-	kiemTraLuong(arr);
-	
+
+		Scanner sc= new Scanner(System.in);
+
+
+		System.out.println("Nhap ho ten: ");
+		hoTen= sc.nextLine();
+
+		kiemTraTuoi(arr);
+
+		System.out.println("Nhap cau lac bo: ");
+		cauLacBo=sc.nextLine();
+
+		kiemTraLuong(arr);
+
 	}
-	
+
 	void kiemTraTuoi(ArrayList<Person> arr) {
 		Scanner sc=new Scanner (System.in);
 		while(true) {
@@ -117,8 +117,8 @@ Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Pl
 			}
 		}
 	}
-	
-	
+
+
 	void kiemTraLuong(ArrayList<Person> arr) {
 		Scanner sc=new Scanner (System.in);
 		while(true) {
@@ -136,16 +136,16 @@ Hướng dẫn: xây dựng lớp Person có các thông tin chung. Hai lớp Pl
 			}
 		}
 	}
-	
+
 	public String toString() {
 		return "\tHo ten: "+hoTen+"\tTuoi: "+tuoi+"\tCau lac bo: "+cauLacBo+"\tLuong: "+luong;
 	}
 
 
-	 
 
-	
-	
-	
-	
+
+
+
+
+
 }
