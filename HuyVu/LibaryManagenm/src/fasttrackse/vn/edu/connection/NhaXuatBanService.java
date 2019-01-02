@@ -2,6 +2,7 @@ package fasttrackse.vn.edu.connection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -11,7 +12,7 @@ import fasttrackse.vn.edu.model.NhaXuatBan;
 public class NhaXuatBanService extends MySqlService {
 
 	PreparedStatement preparedStatement;
-	
+
 	public ArrayList<NhaXuatBan> layToanBoNhaXuatBan(){
 
 		ArrayList<NhaXuatBan> dsNxb = new ArrayList<NhaXuatBan>();
@@ -34,9 +35,9 @@ public class NhaXuatBanService extends MySqlService {
 		}
 		return dsNxb;
 	}
-	
+
 	public int xuLyThem(NhaXuatBan nxb) {
-		
+
 		try {
 			String sqlInsert = "insert into nhaxuatban values(?,?,?,?)";
 			PreparedStatement preparedStatement =connection.prepareStatement(sqlInsert);
@@ -52,9 +53,9 @@ public class NhaXuatBanService extends MySqlService {
 			e.printStackTrace();
 		}
 		return -1;
-		
+
 	}
-	
+
 	public int xuLyCapNhap(NhaXuatBan nxb) {
 		try {
 			String sqlInsert = "update nhaxuatban set tennhaxuatban=?,diachi=?,sophone=? where manhaxuatban=?";
@@ -72,7 +73,7 @@ public class NhaXuatBanService extends MySqlService {
 		}
 		return -1;
 	}
-	
+
 	public int xuLyXoa(NhaXuatBan nxb) {
 		try {
 			String sql = "delete from nhaxuatban where manhaxuatban=?";
@@ -86,9 +87,9 @@ public class NhaXuatBanService extends MySqlService {
 			e.printStackTrace();
 		}
 		return 0;
-		
+
 	}
-	
+
 	public void hienThiChiTiet(String ma,NhaXuatBan nxb)
 	{
 		try
@@ -110,5 +111,7 @@ public class NhaXuatBanService extends MySqlService {
 			ex.printStackTrace();
 		}
 	}
+
+	
 
 }

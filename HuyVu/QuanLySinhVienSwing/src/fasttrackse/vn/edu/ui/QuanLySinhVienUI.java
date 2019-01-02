@@ -1,4 +1,4 @@
-package fasttrackse.vn.edu.ui;
+ package fasttrackse.vn.edu.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -14,6 +14,7 @@ import java.util.Vector;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -80,7 +81,7 @@ public class QuanLySinhVienUI extends JFrame{
 		
 		pnChiTiet.setLayout(new BoxLayout(pnChiTiet, BoxLayout.Y_AXIS));
 		JPanel pnQuanLySinhVien = new JPanel();
-		JLabel lblQuanLySinhVien = new JLabel("Chuong trinh quan ly sinh vien");
+		JLabel lblQuanLySinhVien = new JLabel("Chương trình quản lý sinh viên");
 		lblQuanLySinhVien.setForeground(Color.BLUE);
 		Font font = new Font("arial",Font.BOLD , 20);
 		lblQuanLySinhVien.setFont(font);
@@ -88,21 +89,21 @@ public class QuanLySinhVienUI extends JFrame{
 		pnChiTiet.add(pnQuanLySinhVien);
 		
 		JPanel pnMaSinhVien = new JPanel();
-		JLabel lblMaSinhVien = new JLabel("Ma sinh vien : ");
+		JLabel lblMaSinhVien = new JLabel("Mã sinh viên : ");
 		txtMaSinhVien = new JTextField(20);
 		pnMaSinhVien.add(lblMaSinhVien);
 		pnMaSinhVien.add(txtMaSinhVien);
 		pnChiTiet.add(pnMaSinhVien);
 		
 		JPanel pnTenSinhVien = new JPanel();
-		JLabel lblTenSinhVien = new JLabel("Ten sinh vien : ");
+		JLabel lblTenSinhVien = new JLabel("Tên sinh viên : ");
 		txtTenSinhVien = new JTextField(20);
 		pnTenSinhVien.add(lblTenSinhVien);
 		pnTenSinhVien.add(txtTenSinhVien);
 		pnChiTiet.add(pnTenSinhVien);
 		
 		JPanel pnTuoi= new JPanel();
-		JLabel lblTuoi = new JLabel("Tuoi : ");
+		JLabel lblTuoi = new JLabel("Tuổi : ");
 		txtTuoi = new JTextField(20);
 		pnTuoi.add(lblTuoi);
 		pnTuoi.add(txtTuoi);
@@ -134,6 +135,11 @@ public class QuanLySinhVienUI extends JFrame{
 		pnThoat.add(btnThoat);
 		pnButton.add(pnThoat);
 		pnChiTiet.add(pnButton);
+		
+		btnLuu.setIcon(new ImageIcon("images/save.png"));
+		btnMoi.setIcon(new ImageIcon("images/new.png"));
+		btnXoa.setIcon(new ImageIcon("images/remove.png"));
+		btnThoat.setIcon(new ImageIcon("images/exit.png"));
 		
 		lblTuoi.setPreferredSize(lblMaSinhVien.getPreferredSize());
 		
