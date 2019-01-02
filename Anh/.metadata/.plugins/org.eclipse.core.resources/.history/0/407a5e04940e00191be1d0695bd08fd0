@@ -1,0 +1,30 @@
+import java.awt.BorderLayout;
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class Desktop1 extends JFrame {
+
+	public Desktop1() {
+		super("Demo Windows");
+		 setDefaultCloseOperation(EXIT_ON_CLOSE);
+		 
+		 JPanel pnMain = new JPanel();
+		 pnMain.setLayout(new BorderLayout());
+		 
+		 
+		 getContentPane().add(pnMain);
+
+		 
+	}
+	 public static void main(String[] args) {
+		Desktop1 ui=new Desktop1();
+		ui.setSize(400, 300);
+		 
+		ui.setLocationRelativeTo(null);
+		ui.setVisible(true);//  fale ko hiển thi
+	}
+
+}

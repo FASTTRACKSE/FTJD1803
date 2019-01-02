@@ -1,0 +1,136 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import javax.swing.*;
+
+public class MyWindows extends JFrame{
+	ResultSet rs = null;
+	Statement stmt = null;
+	 public MyWindows(){
+		 super("Demo Windows");
+		 setDefaultCloseOperation(EXIT_ON_CLOSE);
+		 JPanel pnBorder=new JPanel();
+		 	pnBorder.setLayout(new BorderLayout());
+		 
+		 
+		 
+		 JPanel pnNorth=new JPanel();
+		// 	pnNorth.setBackground(Color.GRAY);
+		 	JLabel jlb1 = new JLabel("Chuong trình qu?n lý sinh viên");
+		 	pnNorth.add(jlb1);
+		 	
+		 	pnBorder.add(pnNorth,BorderLayout.NORTH);
+		 	
+		 JPanel pnSouth=new JPanel();
+		// 	pnSouth.setBackground(Color.RED);
+		 	pnBorder.add(pnSouth,BorderLayout.SOUTH);
+		 	
+		 JPanel pnWest=new JPanel();
+		// 	pnWest.setBackground(Color.BLUE);
+		 	pnBorder.add(pnWest,BorderLayout.WEST);
+		 	
+		 JPanel pnEast=new JPanel();
+		// 	pnEast.setBackground(Color.BLUE);
+		 	pnBorder.add(pnEast,BorderLayout.EAST);
+		 	
+		 JPanel pnCenter=new JPanel();
+		 //	pnCenter.setBackground(Color.YELLOW);
+		 	pnCenter.setLayout(new GridLayout(3,2));
+		 	JLabel jlbID = new JLabel("Mã Sinh Viên:");
+		 	pnCenter.add(jlbID);
+		 	JTextField jtxID = new JTextField(20);
+		 	pnCenter.add(jtxID);
+		 	
+		 	JLabel jlbName = new JLabel("Tên Sinh Viên:");
+		 	pnCenter.add(jlbName);
+		 	JTextField jtxName = new JTextField(20);
+		 	pnCenter.add(jtxName);
+		 	
+		 	JLabel jlbOld = new JLabel("Tuổi: ");
+		 	pnCenter.add(jlbOld);
+		 	JTextField jtxOld = new JTextField(20);
+		 	pnCenter.add(jtxOld);
+		 	
+		 	//jtxName.setEditable(false);//ko cho ch?nh s?a tên or nh?p tên
+		 	
+		/*	try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+		
+				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlidaotao","root","");
+				 stmt = con.createStatement();
+				 rs = stmt.executeQuery("select * from student");
+			}catch(Exception ex) {
+ 				System.out.println(ex);
+ 			}
+		 	JButton btn1=new JButton("Luu");
+		 	pnSouth.add(btn1);
+		 	btn1.addActionListener(new ActionListener() {
+		 		public void actionPerformed(ActionEvent arg0) {
+		 		
+		 			try {
+		 				if(rs.next()) {
+		 					jtxID.setText(rs.getString(1));
+		 					jtxName.setText(rs.getString(2));
+		 					jtxOld.setText(rs.getString(3));
+		 				}
+		 			}catch(Exception ex) {
+		 				System.out.println(ex);
+		 			}
+		 		}
+		 		});
+		 	
+		 	JButton btn2=new JButton("M?i");
+		 	pnSouth.add(btn2);
+		 	btn1.addActionListener(new ActionListener() {
+		 		@Override
+		 		public void actionPerformed(ActionEvent arg0) {
+		 		
+		 			try {
+		 				String sqlInsert = "insert into student values()";
+		 				stmt.executeUpdate(sqlInsert);
+		 				
+		 				
+		 			}catch(Exception ex) {
+		 				System.out.println(ex);
+		 			}
+		 		}
+		 		});
+		 	
+		 	JButton btn3=new JButton("Xóa");
+		 	pnSouth.add(btn3);
+		 	
+		 	JButton btn4=new JButton("Thoát");
+		 	pnSouth.add(btn4);
+		 	
+		 	/*btn1.addActionListener(new ActionListener() {
+		 		public void actionPerformed(ActionEvent arg0) {
+		 		//do something here ?coding here
+		 			jtxName.setText("Test");
+		 			String name = jtxName.getText();
+		 			
+		 		}
+		 		}); 
+		 	pnBorder.add(pnCenter,BorderLayout.CENTER);
+		 getContentPane().add(pnBorder);
+		 
+		 */
+		 
+		 
+		 
+		 }
+    public static void main(String[] args) {
+		 MyWindows ui=new MyWindows();
+		 ui.setSize(400, 300);
+		 
+		 ui.setLocationRelativeTo(null);//v? trí c?a s?
+		 ui.setVisible(true);//true hi?n th? c?a s?, ngu?c l?i fale ko hi?n th?
+		 }
+}
+

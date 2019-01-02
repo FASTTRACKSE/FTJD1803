@@ -1,0 +1,46 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.HeadlessException;
+
+import javax.swing.*;
+
+
+public class Desktop1 extends JFrame {
+
+	public Desktop1() {
+		super("Test Layout");
+		 setDefaultCloseOperation(EXIT_ON_CLOSE);
+		 
+		 JPanel pnMain = new JPanel();
+		 pnMain.setLayout(new BorderLayout());
+		 
+		 JPanel topPanel = new JPanel(new GridLayout());
+		// topPanel.setLayout(new SpringLayout());
+		 
+		 topPanel.add(new JLabel("Label: "));
+		 topPanel.add(new JTextField("Text field", 15));
+		 
+		 
+
+	      
+		 
+		 JPanel bottomPanel = new JPanel();
+		 
+		 
+		 
+		 pnMain.add(topPanel, BorderLayout.NORTH);
+		 pnMain.add(bottomPanel, BorderLayout.CENTER);
+		 
+		 getContentPane().add(pnMain);
+
+		 
+	}
+	 public static void main(String[] args) {
+		Desktop1 ui=new Desktop1();
+		ui.setSize(400, 300);
+		 
+		ui.setLocationRelativeTo(null);
+		ui.setVisible(true);//  fale ko hiển thi
+	}
+
+}

@@ -1,0 +1,78 @@
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.*;
+
+import com.sun.prism.paint.Color;
+public class MyWindows extends JFrame {
+	//ResultSet rs = null;
+	//Statement stmt = null;
+	 public MyWindows(){
+		 super("Demo Windows");
+		 setDefaultCloseOperation(EXIT_ON_CLOSE);
+		 JPanel pnBorder=new JPanel();
+		 	pnBorder.setLayout(new BorderLayout());
+		 
+		 
+		 
+		 JPanel pnNorth=new JPanel();
+		 //	pnNorth.setBackground(Color.GRAY);
+		 	JLabel jlb1 = new JLabel("Chương trình quản lý sinh viên");
+		 	pnNorth.add(jlb1);
+		 	
+		 	pnBorder.add(pnNorth,BorderLayout.NORTH);
+		 	
+		 JPanel pnSouth=new JPanel();
+		 //	pnSouth.setBackground(Color.RED);
+		 	pnBorder.add(pnSouth,BorderLayout.SOUTH);
+		 	
+		 JPanel pnWest=new JPanel();
+		 //	pnWest.setBackground(Color.BLUE);
+		 	pnBorder.add(pnWest,BorderLayout.WEST);
+		 	
+		 JPanel pnEast=new JPanel();
+		 	//pnEast.setBackground(Color.BLUE);
+		 	pnBorder.add(pnEast,BorderLayout.EAST);
+		 	
+		 JPanel pnCenter=new JPanel();
+		 ///	pnCenter.setBackground(Color.YELLOW);
+		 	pnCenter.setLayout(new GridLayout(3,2));
+		 	JLabel jlbID = new JLabel("Mã Sinh Viên:");
+		 	pnCenter.add(jlbID);
+		 	JTextField jtxID = new JTextField(20);
+		 	pnCenter.add(jtxID);
+		 	
+		 	JLabel jlbName = new JLabel("Tên Sinh Viên:");
+		 	pnCenter.add(jlbName);
+		 	JTextField jtxName = new JTextField(20);
+		 	pnCenter.add(jtxName);
+		 	
+		 	JLabel jlbOld = new JLabel("Tuổi:");
+		 	pnCenter.add(jlbOld);
+		 	JTextField jtxOld = new JTextField(20);
+		 	pnCenter.add(jtxOld);
+		 	
+		 	//jtxName.setEditable(false);//ko cho chỉnh sửa tên or nhập tên
+		 	
+		//	try {
+			//	Class.forName("com.mysql.cj.jdbc.Driver");
+		
+			//	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlidaotao","root","");
+				// stmt = con.createStatement();
+			//	 rs = stmt.executeQuery("select * from student");
+			//}catch(Exception ex) {
+ 				//System.out.println(ex);
+ 			}
+	
+	
+	
+	public static void main(String[] args) {
+		MyWindows ui = new MyWindows();
+		ui.setSize(400, 300);
+		ui.setLocationRelativeTo(null);
+		ui.setVisible(true);
+	}
+	
+}
+

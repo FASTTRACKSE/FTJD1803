@@ -1,0 +1,17 @@
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+
+
+public class Desktop1 extends JFrame {
+
+	public Desktop1() {
+		super("Demo Windows");
+		 setDefaultCloseOperation(EXIT_ON_CLOSE);
+		 
+		 JPanel pnMain = new JPanel();
+		 
+	}
+	
+
+}
