@@ -32,11 +32,13 @@ public class UserManagement {
 			String chucnang = login(user.getUsername(), user.getPassword(), rs);
 
 			if (chucnang.equals("Giang vien")) {
-				System.out.println( "Xin chao giang vien: "+user.getUsername());
-				sv.xuat();
+				System.out.println("");
+				System.err.println( "Xin chao giang vien: "+user.getUsername());
+				sv.hienthithongtin();
 
 			} else if (chucnang.equals("Can bo")) {
-				System.out.println( "Xin chao can bo: "+user.getUsername());
+				System.out.println("");
+				System.err.println( "Xin chao can bo: "+user.getUsername());
 				System.out.println("-----QUAN LI SINH VIEN-----");
 				sv.menu();
 			} else {
@@ -46,7 +48,8 @@ public class UserManagement {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println("Loi: "+e.getMessage());
 		} 
 	}
 }
