@@ -3,24 +3,32 @@ import java.awt.event.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableModel;
 import javax.xml.ws.handler.MessageContext;
 	public class MyWindow extends JFrame{
+		Statement stmt = null;
+		ResultSet rs = null;
 		 public MyWindow(){
+			 
 		 super("Demo Windows");
 		 JPanel pnBorder=new JPanel();
 		 pnBorder.setLayout(new BorderLayout());
 		 JPanel pnTren=new JPanel();
-		 pnBorder.add(pnTren,BorderLayout.NORTH);
+		// pnBorder.add(pnTren,BorderLayout.NORTH);
 		 JLabel jlbtitle = new JLabel("Chương Trình Quản Lý Sinh Viên");
 		 pnTren.add(jlbtitle);
 		 
 		 JPanel pnCenter=new JPanel();
 		 pnCenter.setLayout(new GridLayout(3, 2));
 		 pnCenter.setBackground(Color.WHITE);
-		 pnBorder.add(pnCenter,BorderLayout.CENTER);
+//		 pnBorder.add(pnCenter,BorderLayout.CENTER);
 
 		 JLabel jlbMSV = new JLabel("Mã Sinh Viên:");
 		 JTextField jtfMSV = new JTextField(10);
@@ -39,7 +47,7 @@ import javax.xml.ws.handler.MessageContext;
 
 		
 		 JPanel pnDuoi=new JPanel();
-		 pnBorder.add(pnDuoi,BorderLayout.SOUTH);
+//		 pnBorder.add(pnDuoi,BorderLayout.SOUTH);
 		 JButton jbttiep = new JButton("Tiếp");
 		 pnDuoi.add(jbttiep);
 		 
@@ -169,11 +177,67 @@ import javax.xml.ws.handler.MessageContext;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		 JPanel pn=new JPanel();
+		 pn.setLayout(new BorderLayout());
+		 pn.add(pnCenter,BorderLayout.CENTER);
+		 pn.add(pnDuoi,BorderLayout.SOUTH);
+		 pnBorder.add(pn,BorderLayout.NORTH);
 		 
 		 
+		 JPanel pnCuoi = new JPanel();
+		 pnCuoi.setLayout(new BorderLayout());
+		 TitledBorder table = new TitledBorder("Danh Sach");
+		 pnCuoi.setBorder(table);
+		
+		 DefaultTableModel dm=new DefaultTableModel();
+		 dm.addColumn("Mã");
+		 dm.addColumn("Tên");
+		 dm.addColumn("Tuổi");
+		 final JTable tbl=new JTable(dm);
+//		while (rs.next()) {
+//			dm.addRow(new String[] {rs.getString(1),rs.getString(2),rs.getString(4)});
+//		}
+//		 dm.addRow(new String[]{"112","Ngô văn Bắp","21"});
+		 try {
+	            while(rs.next()){
+	                String rows[] = new String[3];
+	                rows[0] = rs.getString(1);
+	                rows[1] = rs.getString(2);
+	                rows[2] = rs.getString(4);
+	                dm.addRow(rows);
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
 		 
+		 tbl.addMouseListener(new MouseListener() {
+			 public void mouseReleased(MouseEvent e) {}
+			 public void mousePressed(MouseEvent e) {}
+			 public void mouseExited(MouseEvent e) {}
+			 public void mouseEntered(MouseEvent e) {}
+			 public void mouseClicked(MouseEvent e) {
+			 int row=tbl.getSelectedRow();
+			 int col=tbl.getSelectedColumn();
+			 String s=(String)tbl.getValueAt(row, col);
+			 JOptionPane.showMessageDialog(null, s);
+			 }});
 
-			
+
+		 JScrollPane sc=new JScrollPane(tbl);
+		 
+		 sc.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		 sc.setMaximumSize(new Dimension(150, 50));
+		 sc.setPreferredSize(new Dimension(150, 50));
+         
+         
+		 pnCuoi.add(sc,BorderLayout.CENTER);
+		 pnBorder.add(pnCuoi,BorderLayout.CENTER);
+		 
+//		 Container con=getContentPane();
+//		 con.setLayout(new BorderLayout());
+//		 con.add(sc,BorderLayout.CENTER);
+		 
+		 
 		 getContentPane().add(pnBorder);
 		 setDefaultCloseOperation(EXIT_ON_CLOSE);
 		 
@@ -181,7 +245,7 @@ import javax.xml.ws.handler.MessageContext;
 		 }
 		 public static void main(String[] args) {
 			 MyWindow ui=new MyWindow();
-			 ui.setSize(400, 300);
+			 ui.setSize(500, 300);
 			 ui.setLocationRelativeTo(null);
 			 ui.setVisible(true);
 		}
