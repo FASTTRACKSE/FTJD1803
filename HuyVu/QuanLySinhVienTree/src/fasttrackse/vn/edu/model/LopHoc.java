@@ -30,6 +30,10 @@ public class LopHoc {
 	public void setMaKhoa(int maKhoa) {
 		this.maKhoa = maKhoa;
 	}
+	@Override
+	public String toString() {
+		return this.tenLop;
+	}
 	
 	
 }

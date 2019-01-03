@@ -7,8 +7,8 @@ import com.mysql.cj.jdbc.Driver;
 
 
 public class MysqlService {
-protected Connection connection;
-	
+	protected Connection connection;
+
 	public MysqlService() {
 		try {
 			String sqlConnection = "jdbc:mysql://localhost/quanlysinhvien";

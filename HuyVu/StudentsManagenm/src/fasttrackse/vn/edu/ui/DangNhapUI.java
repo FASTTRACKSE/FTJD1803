@@ -7,6 +7,7 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -21,6 +22,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import fasttrackse.vn.edu.io.FileFactory;
 import fasttrackse.vn.edu.model.DangNhap;
 import fasttrackse.vn.edu.service.DangNhapService;
 
@@ -35,6 +37,22 @@ public class DangNhapUI extends JFrame {
 		super(titles);
 		addControls();
 		addEvents();
+		
+		luuThongTinDangNhap();
+	}
+
+	private void luuThongTinDangNhap() {
+		// TODO Auto-generated method stub
+		File f = new File("login.data");
+		if(f.exists()) {
+			Object data = FileFactory.readData("login.data");
+			if(data!=null) {
+				DangNhap dn  = (DangNhap) data;
+				txtUserName.setText(dn.getUserName());
+				txtPassword.setText(dn.getPassword());
+				chkSave.setSelected(true);
+			}
+		}
 	}
 
 	private void addEvents() {
@@ -54,6 +72,13 @@ public class DangNhapUI extends JFrame {
 		DangNhapService dnService = new DangNhapService();
 		DangNhap dn = dnService.login(txtUserName.getText(), txtPassword.getText());
 		if(dn!=null) {
+			
+			if(chkSave.isSelected()) {
+				FileFactory.saveDate(dn, "login.data");
+			}
+			else {
+				FileFactory.saveDate(null, "login.data");
+			}
 			dispose();
 			MainUI mainUI = new MainUI("Quản trị danh sách sinh viên");
 			mainUI.showWindow();

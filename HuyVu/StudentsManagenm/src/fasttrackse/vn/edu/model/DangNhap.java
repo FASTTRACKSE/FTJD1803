@@ -1,6 +1,8 @@
 package fasttrackse.vn.edu.model;
 
-public class DangNhap {
+import java.io.Serializable;
+
+public class DangNhap implements Serializable{
 	private String userName;
 	private String password;
 	
