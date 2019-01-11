@@ -10,6 +10,7 @@ public class SinhVien {
 	private int diemTb;
 	private int maLop;
 	
+	
 	public int getMaSinhVien() {
 		return maSinhVien;
 	}
@@ -40,6 +41,13 @@ public class SinhVien {
 	public void setMaLop(int maLop) {
 		this.maLop = maLop;
 	}
+	
+	@Override
+	public String toString() {
+		return "SinhVien [maLop=" + maLop + "]";
+	}
+	
+	
 	
 	
 

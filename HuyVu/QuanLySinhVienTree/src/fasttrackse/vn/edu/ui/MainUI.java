@@ -36,7 +36,8 @@ import fasttrackse.vn.edu.service.SinhVienService;
 public class MainUI extends JFrame{
 
 	JTextField txtMaSinhVien,txtHoTen,txtDiemTb;
-	JComboBox cbMaLop;
+	
+	JComboBox<LopHoc> cbMaLop;
 
 	JDateChooser dcNgaySinh;
 
@@ -154,7 +155,7 @@ public class MainUI extends JFrame{
 		JPanel pnMaLop = new JPanel();
 		pnMaLop.setLayout(new FlowLayout(FlowLayout.LEFT));
 		JLabel lblMaLop = new JLabel("Ma lop :");
-		cbMaLop = new JComboBox<>();
+		cbMaLop = new JComboBox<LopHoc>();
 		cbMaLop.setPreferredSize(new Dimension(100, 20));
 		pnMaLop.add(lblMaLop);
 		pnMaLop.add(cbMaLop);
@@ -223,11 +224,76 @@ public class MainUI extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
+				DefaultMutableTreeNode nodeSelect = (DefaultMutableTreeNode) treeLop.getLastSelectedPathComponent();
+				if(nodeSelect==null)
+					return;
+				if(nodeSelect.getLevel()==0)
+					return;
+				if(svService==null)
+					svService = new SinhVienService();
+				selectedLop = (LopHoc) nodeSelect.getUserObject();
+				if(selectedLop!=null)
+					dsSinhVien = svService.layToanBoSinhVienTheoMaLop(selectedLop.getMaLop());
+				hienThiToanBoSinhVienLenTable();
+			}
+		});
+		
+		tblSinhVien.addMouseListener(new MouseListener() {
+			
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				// TODO Auto-generated method stub
 				
+			}
+			
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				int row = tblSinhVien.getSelectedRow();
+				if(row==-1) return;
+				SinhVien sv = dsSinhVien.get(0);
+				txtMaSinhVien.setText(String.valueOf(sv.getMaSinhVien()));
+				txtHoTen.setText(sv.getHoTen());
+				dcNgaySinh.setDate(sv.getNgaySinh());
+				txtDiemTb.setText(String.valueOf(sv.getDiemTb()));
+				cbMaLop.setSelectedItem(sv.getMaLop());
 			}
 		});
 	}
 	
+	protected void hienThiToanBoSinhVienLenTable() {
+		// TODO Auto-generated method stub
+		dtmSinhVien.setRowCount(0);
+		for(SinhVien sv:dsSinhVien) {
+			Vector<Object> vc = new Vector<Object>();
+			vc.add(sv.getMaSinhVien());
+			vc.add(sv.getHoTen());
+			vc.add(sv.getNgaySinh());
+			vc.add(sv.getDiemTb());
+			vc.add(sv.getMaLop());
+			dtmSinhVien.addRow(vc);
+		}
+		
+	}
+
 	private void setUpMenu() {
 		menuItemThem = new JMenuItem("Them lop moi");
 		menuItemThem.setIcon(new ImageIcon("images/new.png"));

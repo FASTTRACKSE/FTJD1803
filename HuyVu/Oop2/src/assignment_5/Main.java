@@ -91,5 +91,6 @@ public class Main {
 		System.out.println("| 4 . Sắp xếp cán bộ theo lương, nếu lương bằng thì sắp xếp theo tên ");
 		System.out.println("| 5 . Thoat ");
 	}
+	
 
 }

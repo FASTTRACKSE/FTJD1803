@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import fasttrackse.vn.edu.model.SinhVien;
 
 public class SinhVienService extends MysqlService{
+	
 	public ArrayList<SinhVien> layToanBoSinhVienTheoMaLop(int maLop){
 
 		ArrayList<SinhVien> ds = new ArrayList<SinhVien>();
