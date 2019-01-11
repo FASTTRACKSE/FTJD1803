@@ -41,4 +41,5 @@ Bai thi project : Bai project quan ly cau lac bo <a href="https://github.com/FAS
 --------------- Bai 1 ---------------</br>
 Bai 1 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/QuanLySinhVienSwing/src/fasttrackse/vn/edu">Bai 1</a></br>
 Bai 2 : <a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/QuanLySinhVienTree/src/fasttrackse/vn/edu">Quan Ly Sinh Vien dang Tree</a></br>
-
+-------------------------------------------------- Finish ---------------------------------------------------------------</br>
+Project Quản lý trường học :<a href="https://github.com/FASTTRACKSE/FTJD1803/tree/master/HuyVu/PointsStudents/src/fasttrackse/vn/edu">Project</a>
